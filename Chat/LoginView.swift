@@ -19,6 +19,7 @@ struct LoginView: View {
       .navigationTitle(isLoginMode ? "Log in" : "Create Account")
       .background(Color(.init(white: 0, alpha: 0.05)))
     }
+    .navigationViewStyle(.stack)
   }
   var content: some View {
     VStack(spacing: 16) {
