@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F26CC9D27BF198700BC0A4D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26CC9C27BF198700BC0A4D /* ImagePicker.swift */; };
 		1F342FDC27BE91320049535E /* ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F342FDB27BE91320049535E /* ChatApp.swift */; };
 		1F342FDE27BE91320049535E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F342FDD27BE91320049535E /* LoginView.swift */; };
 		1F342FE027BE91330049535E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F342FDF27BE91330049535E /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F26CC9C27BF198700BC0A4D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		1F342FD827BE91320049535E /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F342FDB27BE91320049535E /* ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApp.swift; sourceTree = "<group>"; };
 		1F342FDD27BE91320049535E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				1F342FDB27BE91320049535E /* ChatApp.swift */,
 				1F342FDD27BE91320049535E /* LoginView.swift */,
+				1F26CC9C27BF198700BC0A4D /* ImagePicker.swift */,
 				1F342FDF27BE91330049535E /* Assets.xcassets */,
 				1F342FE927BEC1ED0049535E /* GoogleService-Info.plist */,
 				1F342FE127BE91330049535E /* Preview Content */,
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F26CC9D27BF198700BC0A4D /* ImagePicker.swift in Sources */,
 				1F342FDE27BE91320049535E /* LoginView.swift in Sources */,
 				1F342FDC27BE91320049535E /* ChatApp.swift in Sources */,
 			);
