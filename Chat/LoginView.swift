@@ -13,7 +13,9 @@ struct LoginView: View {
   @State var email = ""
   @State var password = ""
   @State var loginStatus = ""
-  
+  @State var shouldShowImagePicker = false
+  @State var image: UIImage?
+  let avatarWidth = 128.0
   var body: some View {
     NavigationView {
       ScrollView {
@@ -23,6 +25,9 @@ struct LoginView: View {
       .background(Color(.init(white: 0, alpha: 0.05)))
     }
     .navigationViewStyle(.stack)
+    .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil) {
+      ImagePicker(image: $image)
+    }
   }
   var content: some View {
     VStack(spacing: 16) {
@@ -33,11 +38,8 @@ struct LoginView: View {
       .pickerStyle(.segmented)
       if !isLoginMode {
         Button {
-          
-        } label: {
-          Image(systemName: "person.fill")
-            .font(.system(size: 64))
-        }
+          shouldShowImagePicker.toggle()
+        } label: { avatar }
       }
       Group {
         TextField("Email", text: $email)
@@ -63,6 +65,27 @@ struct LoginView: View {
     .padding()
     
   }
+  
+  var avatar: some View {
+    VStack {
+      if let image = image {
+        Image(uiImage: image)
+          .resizable()
+          .scaledToFill()
+          .frame(width: avatarWidth, height: avatarWidth)
+          .clipShape(Circle())
+      } else {
+        Image(systemName: "person.fill")
+          .font(.system(size: 0.75 * avatarWidth))
+          .frame(width: avatarWidth, height: avatarWidth)
+          .foregroundColor(Color(.label))
+      }
+        
+    }
+    .overlay(
+      Circle().stroke(Color.black, lineWidth: 3))
+  }
+  
   private func handleAction() {
     if isLoginMode {
       loginUser()
@@ -81,6 +104,7 @@ struct LoginView: View {
       loginStatus = "Successfully logged as user: \(result?.user.uid ?? "...")"
     }
   }
+  
   private func createNewAccount() {
     Auth.auth().createUser(withEmail: email, password: password) { result, error in
       if let error = error {
@@ -88,10 +112,51 @@ struct LoginView: View {
         return
       }
       loginStatus = "Successfully created user: \(result?.user.uid ?? "...")"
+      
+      persistImageToStorage()
+    }
+  }
+  
+  private func persistImageToStorage() {
+    guard let uid = FirebaseManager.shared.auth.currentUser?.uid else { return }
+    let ref = FirebaseManager.shared.storage.reference(withPath: uid)
+    guard let imageData = image?.jpegData(compressionQuality: 0.5) else { return }
+    ref.putData(imageData, metadata: nil) { metadata, error in
+      if let error = error {
+        loginStatus = "Failed to push image to Storage: \(error.localizedDescription)"
+        return
+      }
+      
+      ref.downloadURL { url, error in
+        if let error = error {
+          loginStatus = "Failed to retrieve download URL: \(error.localizedDescription)"
+          return
+        }
+        if let url = url {
+          loginStatus = "Successfully stored image with url: \(url.absoluteString)"
+          print(loginStatus)
+          self.storeUserInfromation(imageProfileUrl: url)
+        }
+      }
+    }
+  }
+  private func storeUserInfromation(imageProfileUrl: URL) {
+    guard let uid = FirebaseManager.shared.auth.currentUser?.uid else { return }
+    let userData = [
+      "email": email,
+      "uid": uid,
+      "prifileImageUrl": imageProfileUrl.absoluteString
+    ]
+    FirebaseManager.shared.firestore.collection("users").document(uid).setData(userData) { error in
+      if let error = error {
+        loginStatus = "Failed: \(error.localizedDescription)"
+        return
+      }
+      loginStatus = "Success"
+      print(loginStatus)
     }
   }
 }
-
 
 struct LoginView_Previews: PreviewProvider {
   static var previews: some View {
