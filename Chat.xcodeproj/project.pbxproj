@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02552B7327F36F7D0080BABB /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02552B7227F36F7D0080BABB /* SettingsHeaderView.swift */; };
+		02552B7527F370270080BABB /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02552B7427F370270080BABB /* SettingsCell.swift */; };
 		027AADEE27F32C8600AE3A61 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027AADED27F32C8500AE3A61 /* CustomTextField.swift */; };
 		027AADF127F33FF700AE3A61 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027AADF027F33FF700AE3A61 /* MainTabView.swift */; };
 		027AADF627F341CE00AE3A61 /* ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027AADF527F341CE00AE3A61 /* ChannelsView.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02552B7227F36F7D0080BABB /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
+		02552B7427F370270080BABB /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		027AADED27F32C8500AE3A61 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		027AADF027F33FF700AE3A61 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		027AADF527F341CE00AE3A61 /* ChannelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsView.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				027AADF727F341D900AE3A61 /* SettingsView.swift */,
+				02552B7427F370270080BABB /* SettingsCell.swift */,
+				02552B7227F36F7D0080BABB /* SettingsHeaderView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 			files = (
 				1F26CC9F27BF664A00BC0A4D /* FirebaseManager.swift in Sources */,
 				1F26CC9D27BF198700BC0A4D /* ImagePicker.swift in Sources */,
+				02552B7327F36F7D0080BABB /* SettingsHeaderView.swift in Sources */,
 				027AADF627F341CE00AE3A61 /* ChannelsView.swift in Sources */,
 				027AADF127F33FF700AE3A61 /* MainTabView.swift in Sources */,
 				027AADFA27F341F500AE3A61 /* ChatView.swift in Sources */,
@@ -303,6 +310,7 @@
 				1F342FDC27BE91320049535E /* ChatApp.swift in Sources */,
 				1F26CCA227BFA3C200BC0A4D /* MainMessagesView.swift in Sources */,
 				027AADF827F341D900AE3A61 /* SettingsView.swift in Sources */,
+				02552B7527F370270080BABB /* SettingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
