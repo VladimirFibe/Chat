@@ -12,10 +12,10 @@ struct SettingsView: View {
     VStack(spacing: 20.0) {
       SettingsHeaderView()
       VStack(spacing: 0.0) {
-        SettingsCell(color: .blue, title: "Account", image: "key.fill")
-        SettingsCell(color: .red, title: "Notifications", image: "bell.fill")
-        SettingsCell(color: .yellow, title: "Starred Messages", image: "star.fill")
-          .padding(.bottom, 8)
+        ForEach(SettingsCellViewModel.allCases) { viewModel in
+          SettingsCell(viewModel: viewModel)
+        }
+        .padding(.bottom, 8)
       }
       .background(Color.white)
       Button {
@@ -28,7 +28,7 @@ struct SettingsView: View {
       .padding(.vertical)
       .frame(maxWidth: .infinity)
       .background(Color.white)
-
+      
       Spacer()
     }
     .padding(.vertical)
