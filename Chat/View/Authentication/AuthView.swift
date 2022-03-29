@@ -8,22 +8,40 @@
 import SwiftUI
 
 struct AuthView: View {
+  @State private var email = ""
+  @State private var password = ""
   var body: some View {
     NavigationView {
       VStack(alignment: .leading) {
-        Text("Hello")
-          .font(.largeTitle)
-          .bold()
+        title
         
-        Text("Welcome Back")
-          .font(.largeTitle)
-          .bold()
-          .foregroundColor(.blue)
+        fields
       }
       .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
       .padding()
       .navigationBarHidden(true)
     }
+  }
+  
+  var title: some View {
+    VStack(alignment: .leading) {
+      Text("Hello")
+        .font(.largeTitle)
+        .bold()
+      
+      Text("Welcome Back")
+        .font(.largeTitle)
+        .bold()
+        .foregroundColor(.blue)
+    }
+  }
+  
+  var fields: some View {
+    VStack(spacing: 20.0) {
+      TextField("Email", text: $email)
+      SecureField("Password", text: $password)
+    }
+    .padding([.top, .horizontal], 32)
   }
 }
 
