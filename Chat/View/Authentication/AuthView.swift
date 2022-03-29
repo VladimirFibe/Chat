@@ -45,7 +45,7 @@ struct AuthView: View {
   }
   
   var fields: some View {
-    VStack(spacing: 20.0) {
+    VStack(spacing: 40.0) {
       CustomTextField(image: "envelope", placeholder: "Email", text: $email)
       CustomTextField(image: "lock", placeholder: "Password", isSecureField: true, text: $password)
     }
@@ -57,10 +57,11 @@ struct AuthView: View {
       print(email, password)
     } label: {
       Text("Sign In")
+        .frame(maxWidth: .infinity)
     }
     .buttonStyle(.borderedProminent)
+    .padding(.horizontal, 40)
     .shadow(color: .gray, radius: 10, x: 0, y: 0)
-    .frame(maxWidth: .infinity)
   }
   
   var forgotPasswordView: some View {
@@ -70,6 +71,7 @@ struct AuthView: View {
         Text("Forgot Password?")
       }
     }
+    .padding(.trailing)
   }
   
   var registerView: some View {
