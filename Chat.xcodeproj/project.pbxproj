@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		027AADEE27F32C8600AE3A61 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027AADED27F32C8500AE3A61 /* CustomTextField.swift */; };
 		0297567027F2E7FB00131C61 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297566F27F2E7FB00131C61 /* AuthView.swift */; };
 		0297567227F2E82900131C61 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297567127F2E82900131C61 /* RegistrationView.swift */; };
 		1F26CC9D27BF198700BC0A4D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26CC9C27BF198700BC0A4D /* ImagePicker.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		027AADED27F32C8500AE3A61 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0297566F27F2E7FB00131C61 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		0297567127F2E82900131C61 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		1F26CC9C27BF198700BC0A4D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				0297566F27F2E7FB00131C61 /* AuthView.swift */,
+				027AADED27F32C8500AE3A61 /* CustomTextField.swift */,
 				0297567127F2E82900131C61 /* RegistrationView.swift */,
 			);
 			path = Authentication;
@@ -236,6 +239,7 @@
 				1F26CC9D27BF198700BC0A4D /* ImagePicker.swift in Sources */,
 				0297567027F2E7FB00131C61 /* AuthView.swift in Sources */,
 				0297567227F2E82900131C61 /* RegistrationView.swift in Sources */,
+				027AADEE27F32C8600AE3A61 /* CustomTextField.swift in Sources */,
 				1F342FDE27BE91320049535E /* LoginView.swift in Sources */,
 				1F342FDC27BE91320049535E /* ChatApp.swift in Sources */,
 				1F26CCA227BFA3C200BC0A4D /* MainMessagesView.swift in Sources */,

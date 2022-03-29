@@ -46,8 +46,8 @@ struct AuthView: View {
   
   var fields: some View {
     VStack(spacing: 20.0) {
-      TextField("Email", text: $email)
-      SecureField("Password", text: $password)
+      CustomTextField(image: "envelope", placeholder: "Email", text: $email)
+      CustomTextField(image: "lock", placeholder: "Password", isSecureField: true, text: $password)
     }
     .padding(.horizontal, 32)
   }
@@ -85,3 +85,8 @@ struct AuthView_Previews: PreviewProvider {
     AuthView()
   }
 }
+
+extension Color {
+  static let darkGray = Color(.darkGray)
+}
+
