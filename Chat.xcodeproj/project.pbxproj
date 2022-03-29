@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0297567027F2E7FB00131C61 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297566F27F2E7FB00131C61 /* AuthView.swift */; };
+		0297567227F2E82900131C61 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297567127F2E82900131C61 /* RegistrationView.swift */; };
 		1F26CC9D27BF198700BC0A4D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26CC9C27BF198700BC0A4D /* ImagePicker.swift */; };
 		1F26CC9F27BF664A00BC0A4D /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26CC9E27BF664A00BC0A4D /* FirebaseManager.swift */; };
 		1F26CCA227BFA3C200BC0A4D /* MainMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F26CCA127BFA3C200BC0A4D /* MainMessagesView.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0297566F27F2E7FB00131C61 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		0297567127F2E82900131C61 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		1F26CC9C27BF198700BC0A4D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		1F26CC9E27BF664A00BC0A4D /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		1F26CCA127BFA3C200BC0A4D /* MainMessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessagesView.swift; sourceTree = "<group>"; };
@@ -50,9 +54,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0297566927F2E73200131C61 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0297566A27F2E74300131C61 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0297566B27F2E74600131C61 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0297566C27F2E74800131C61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0297566E27F2E7B900131C61 /* Authentication */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0297566D27F2E74B00131C61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0297566E27F2E7B900131C61 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				0297566F27F2E7FB00131C61 /* AuthView.swift */,
+				0297567127F2E82900131C61 /* RegistrationView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		1F26CCA027BFA3A800BC0A4D /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				1F26CC9E27BF664A00BC0A4D /* FirebaseManager.swift */,
+				1F342FDD27BE91320049535E /* LoginView.swift */,
+				1F26CC9C27BF198700BC0A4D /* ImagePicker.swift */,
 				1F26CCA127BFA3C200BC0A4D /* MainMessagesView.swift */,
 			);
 			path = Messages;
@@ -77,11 +129,13 @@
 		1F342FDA27BE91320049535E /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				1F26CCA027BFA3A800BC0A4D /* Messages */,
 				1F342FDB27BE91320049535E /* ChatApp.swift */,
-				1F342FDD27BE91320049535E /* LoginView.swift */,
-				1F26CC9C27BF198700BC0A4D /* ImagePicker.swift */,
-				1F26CC9E27BF664A00BC0A4D /* FirebaseManager.swift */,
+				0297566D27F2E74B00131C61 /* Model */,
+				0297566C27F2E74800131C61 /* View */,
+				0297566B27F2E74600131C61 /* ViewModel */,
+				0297566A27F2E74300131C61 /* API */,
+				0297566927F2E73200131C61 /* Utilities */,
+				1F26CCA027BFA3A800BC0A4D /* Messages */,
 				1F342FDF27BE91330049535E /* Assets.xcassets */,
 				1F342FE927BEC1ED0049535E /* GoogleService-Info.plist */,
 				1F342FE127BE91330049535E /* Preview Content */,
@@ -180,6 +234,8 @@
 			files = (
 				1F26CC9F27BF664A00BC0A4D /* FirebaseManager.swift in Sources */,
 				1F26CC9D27BF198700BC0A4D /* ImagePicker.swift in Sources */,
+				0297567027F2E7FB00131C61 /* AuthView.swift in Sources */,
+				0297567227F2E82900131C61 /* RegistrationView.swift in Sources */,
 				1F342FDE27BE91320049535E /* LoginView.swift in Sources */,
 				1F342FDC27BE91320049535E /* ChatApp.swift in Sources */,
 				1F26CCA227BFA3C200BC0A4D /* MainMessagesView.swift in Sources */,
@@ -311,7 +367,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
@@ -319,13 +375,14 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -340,7 +397,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
@@ -348,13 +405,14 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
