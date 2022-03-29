@@ -15,7 +15,7 @@ struct ChatApp: App {
   }
   var body: some Scene {
     WindowGroup {
-      AuthView()
+      MainTabView()
     }
   }
 }
