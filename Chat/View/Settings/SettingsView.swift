@@ -10,7 +10,9 @@ import SwiftUI
 struct SettingsView: View {
   var body: some View {
     VStack(spacing: 20.0) {
-      SettingsHeaderView()
+      NavigationLink(destination: EditProfileView()) {
+        SettingsHeaderView()
+      }
       VStack(spacing: 0.0) {
         ForEach(SettingsCellViewModel.allCases) { viewModel in
           SettingsCell(viewModel: viewModel)

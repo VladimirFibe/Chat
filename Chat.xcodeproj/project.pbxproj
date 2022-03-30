@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023D6EE127F3D09E0068CF91 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D6EE027F3D09E0068CF91 /* EditProfileView.swift */; };
 		02552B7327F36F7D0080BABB /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02552B7227F36F7D0080BABB /* SettingsHeaderView.swift */; };
 		02552B7527F370270080BABB /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02552B7427F370270080BABB /* SettingsCell.swift */; };
 		02552B7727F376850080BABB /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02552B7627F376850080BABB /* SettingsCellViewModel.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		023D6EE027F3D09E0068CF91 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		02552B7227F36F7D0080BABB /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
 		02552B7427F370270080BABB /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		02552B7627F376850080BABB /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				027AADF727F341D900AE3A61 /* SettingsView.swift */,
 				02552B7427F370270080BABB /* SettingsCell.swift */,
 				02552B7227F36F7D0080BABB /* SettingsHeaderView.swift */,
+				023D6EE027F3D09E0068CF91 /* EditProfileView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F26CC9F27BF664A00BC0A4D /* FirebaseManager.swift in Sources */,
+				023D6EE127F3D09E0068CF91 /* EditProfileView.swift in Sources */,
 				1F26CC9D27BF198700BC0A4D /* ImagePicker.swift in Sources */,
 				02552B7327F36F7D0080BABB /* SettingsHeaderView.swift in Sources */,
 				02552B7727F376850080BABB /* SettingsCellViewModel.swift in Sources */,
