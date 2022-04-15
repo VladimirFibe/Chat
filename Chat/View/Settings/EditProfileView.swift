@@ -36,7 +36,6 @@ struct EditProfileView: View {
           } label: {
             Text("Edit")
           }
-
         }
         Text("Enter you name or change your profile photo")
           .font(.system(size: 16))
@@ -54,7 +53,7 @@ struct EditProfileView: View {
       Text("Status")
         .padding()
         .foregroundColor(.gray)
-      NavigationLink(destination: Text("Edit status")) {
+      NavigationLink(destination: StatusSelectorView()) {
         HStack {
           Text("At the movies")
           Spacer()
