@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct NewMessageView: View {
+  @Environment(\.dismiss) var dismiss
     var body: some View {
       ScrollView {
         VStack(alignment: .leading) {
           ForEach(0 ..< 25) { item in
-            UserCell()
+            Button(action: {
+              dismiss()
+            }) {
+              UserCell()
+                .tint(.black)
+            }
           }
         }
         .padding()

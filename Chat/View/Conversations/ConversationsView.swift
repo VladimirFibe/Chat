@@ -9,17 +9,26 @@ import SwiftUI
 
 struct ConversationsView: View {
   @State private var showNewMessageView = false
+  @State private var showChatView = false
   var body: some View {
     ScrollView {
       VStack {
         ForEach(0 ..< 25) { item in
           ConversationCell()
         }
+        NavigationLink(isActive: $showChatView) {
+          ChatView()
+        } label: {
+          EmptyView()
+        }
+
       }
       .frame(maxWidth: .infinity, alignment: .leading)
       .padding()
     }
-    .sheet(isPresented: $showNewMessageView) {
+    .sheet(isPresented: $showNewMessageView, onDismiss: {
+      showChatView.toggle()
+    }) {
       NewMessageView()
     }
     .overlay(alignment: .bottomTrailing) {
