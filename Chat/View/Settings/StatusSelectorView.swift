@@ -14,22 +14,20 @@ struct StatusSelectorView: View {
         Text("CURRENTLY SET TO")
           .foregroundColor(.gray)
           .padding()
-        Text("Select")
-          .frame(maxWidth: .infinity, alignment: .leading)
-          .padding()
-          .background(Color.white)
+        StatusCell(item: .available)
         Text("SELECT YOUR STATUS")
           .foregroundColor(.gray)
           .padding()
-        VStack(alignment: .leading, spacing: 30.0) {
-          ForEach(0 ..< 25) { item in
-            Text("Available")
+        VStack(alignment: .leading, spacing: 0) {
+          ForEach(StatusViewModel.allCases.filter{$0 != .notConfigured}) { item in
+            Button(action: {
+              print("\(item.title)")
+            }) {
+              StatusCell(item: item)
+            }
+            .accentColor(.black)
           }
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding()
-        .background(Color.white)
-        Spacer()
       }
       .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
@@ -42,5 +40,16 @@ struct StatusSelectorView: View {
 struct StatusSelectorView_Previews: PreviewProvider {
   static var previews: some View {
     StatusSelectorView()
+  }
+}
+
+struct StatusCell: View {
+  let item: StatusViewModel
+  var body: some View {
+    Text(item.title)
+      .frame(height: 56)
+      .frame(maxWidth: .infinity, alignment: .leading)
+      .padding(.horizontal)
+      .background(Color.white)
   }
 }
