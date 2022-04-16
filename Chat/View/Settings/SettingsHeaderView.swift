@@ -10,12 +10,8 @@ import SwiftUI
 struct SettingsHeaderView: View {
   var body: some View {
     HStack {
-      Image("profile")
-        .resizable()
-        .scaledToFill()
-        .frame(width: 64, height: 64)
-        .clipShape(Circle())
-        .padding(.leading)
+      AvatarView(image: Image("profile"))
+
       VStack(alignment: .leading, spacing: 4) {
         Text("Eddie Brock")
           .font(.system(size: 18))

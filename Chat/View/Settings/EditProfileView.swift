@@ -31,11 +31,8 @@ struct EditProfileView: View {
     VStack(alignment: .leading) {
       HStack(spacing: 20.0) {
         VStack {
-          avatar
-            .resizable()
-            .scaledToFill()
-            .frame(width: 64, height: 64)
-            .clipShape(Circle())
+          AvatarView(image: avatar)
+            
           Button {
             showImagePicker.toggle()
           } label: {

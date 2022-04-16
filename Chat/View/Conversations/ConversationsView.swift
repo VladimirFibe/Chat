@@ -8,13 +8,39 @@
 import SwiftUI
 
 struct ConversationsView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  var body: some View {
+    ScrollView {
+      VStack {
+        ForEach(0 ..< 25) { item in
+          ConversationCell()
+        }
+      }
+      .frame(maxWidth: .infinity, alignment: .leading)
+      .padding()
     }
+    .overlay(alignment: .bottomTrailing) {
+      squarePencil
+    }
+  }
+  var squarePencil: some View {
+    Button {
+      print("Show user list sheet...")
+    } label: {
+      Image(systemName: "square.and.pencil")
+        .resizable()
+        .scaledToFit()
+        .frame(width: 24, height: 24)
+        .padding()
+        .background(Color(.systemBlue), in: Circle())
+        .tint(.white)
+        .padding()
+    }
+
+  }
 }
 
 struct ConversationsView_Previews: PreviewProvider {
-    static var previews: some View {
-        ConversationsView()
-    }
+  static var previews: some View {
+    ConversationsView()
+  }
 }
