@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ConversationsView: View {
+  @State private var showNewMessageView = false
   var body: some View {
     ScrollView {
       VStack {
@@ -18,13 +19,16 @@ struct ConversationsView: View {
       .frame(maxWidth: .infinity, alignment: .leading)
       .padding()
     }
+    .sheet(isPresented: $showNewMessageView) {
+      NewMessageView()
+    }
     .overlay(alignment: .bottomTrailing) {
       squarePencil
     }
   }
   var squarePencil: some View {
     Button {
-      print("Show user list sheet...")
+      showNewMessageView.toggle()
     } label: {
       Image(systemName: "square.and.pencil")
         .resizable()

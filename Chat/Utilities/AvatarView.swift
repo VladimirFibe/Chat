@@ -9,11 +9,12 @@ import SwiftUI
 
 struct AvatarView: View {
   let image: Image
+  var width = 64.0
   var body: some View {
     image
       .resizable()
       .scaledToFill()
-      .frame(width: 64, height: 64)
+      .frame(width: width, height: width)
       .clipShape(Circle())
   }
 }

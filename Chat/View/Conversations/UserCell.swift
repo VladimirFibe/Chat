@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct UserCell: View {
-    var body: some View {
+  var body: some View {
       HStack {
-        AvatarView(image: Image("profile"))
-        VStack(alignment: .leading) {
+        AvatarView(image: Image("profile"), width: 48.0)
+        VStack(alignment: .leading, spacing: 4.0) {
+          Text("Venom")
+            .font(.system(size: 14, weight: .semibold))
           Text("Eddie Brock")
-          Text("Hey")
+            .font(.system(size: 15))
         }
       }
-    }
+  }
 }
 
 struct UserCell_Previews: PreviewProvider {
