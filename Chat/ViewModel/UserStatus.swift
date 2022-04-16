@@ -1,5 +1,5 @@
 //
-//  StatusViewModel.swift
+//  UserStatus.swift
 //  Chat
 //
 //  Created by Vladimir Fibe on 16.04.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum StatusViewModel: Identifiable, CaseIterable {
+enum UserStatus: Identifiable, CaseIterable {
   case notConfigured
   case available
   case busy
@@ -20,7 +20,7 @@ enum StatusViewModel: Identifiable, CaseIterable {
   case sleeping
   case urgentCallsOnly
   
-  var id: StatusViewModel {
+  var id: UserStatus {
     self
   }
   
