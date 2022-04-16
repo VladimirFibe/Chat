@@ -11,11 +11,10 @@ struct EditProfileView: View {
   @State private var fullname = "Eddie Brock"
   @State private var showImagePicker = false
   @State private var image: UIImage?
-  
+  @State private var avatar = Image("profile")
   var body: some View {
     VStack(spacing: 20.0) {
       header
-      
       status
       Spacer()
     }
@@ -24,28 +23,19 @@ struct EditProfileView: View {
     .background(Color(.systemGroupedBackground))
     .navigationTitle("Edit Profile")
     .navigationBarTitleDisplayMode(.inline)
-    .sheet(isPresented: $showImagePicker) {
-      ImagePicker(image: $image)
+    .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
+      ImagePicker(image: $image).edgesIgnoringSafeArea(.bottom)
     }
   }
   var header: some View {
     VStack(alignment: .leading) {
       HStack(spacing: 20.0) {
         VStack {
-          if let image = image {
-            Image(uiImage: image)
-              .resizable()
-              .scaledToFill()
-              .frame(width: 64, height: 64)
-              .clipShape(Circle())
-          } else {
-            Image("profile")
-              .resizable()
-              .scaledToFill()
-              .frame(width: 64, height: 64)
-              .clipShape(Circle())
-          }
-          
+          avatar
+            .resizable()
+            .scaledToFill()
+            .frame(width: 64, height: 64)
+            .clipShape(Circle())
           Button {
             showImagePicker.toggle()
           } label: {
@@ -78,6 +68,11 @@ struct EditProfileView: View {
         .padding()
       .background(Color.white)
       }
+    }
+  }
+  func loadImage() {
+    if let image = image {
+      avatar = Image(uiImage: image)
     }
   }
 }
