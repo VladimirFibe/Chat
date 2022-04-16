@@ -9,6 +9,9 @@ import SwiftUI
 
 struct EditProfileView: View {
   @State private var fullname = "Eddie Brock"
+  @State private var showImagePicker = false
+  @State private var image: UIImage?
+  
   var body: some View {
     VStack(spacing: 20.0) {
       header
@@ -21,18 +24,30 @@ struct EditProfileView: View {
     .background(Color(.systemGroupedBackground))
     .navigationTitle("Edit Profile")
     .navigationBarTitleDisplayMode(.inline)
+    .sheet(isPresented: $showImagePicker) {
+      ImagePicker(image: $image)
+    }
   }
   var header: some View {
     VStack(alignment: .leading) {
       HStack(spacing: 20.0) {
         VStack {
-          Image("profile")
-            .resizable()
-            .scaledToFill()
-            .frame(width: 64, height: 64)
-          .clipShape(Circle())
+          if let image = image {
+            Image(uiImage: image)
+              .resizable()
+              .scaledToFill()
+              .frame(width: 64, height: 64)
+              .clipShape(Circle())
+          } else {
+            Image("profile")
+              .resizable()
+              .scaledToFill()
+              .frame(width: 64, height: 64)
+              .clipShape(Circle())
+          }
+          
           Button {
-            
+            showImagePicker.toggle()
           } label: {
             Text("Edit")
           }

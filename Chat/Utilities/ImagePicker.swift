@@ -2,24 +2,28 @@
 //  ImagePicker.swift
 //  Chat
 //
-//  Created by Vladimir Fibe on 18.02.2022.
+//  Created by Vladimir Fibe on 16.04.2022.
 //
 
 import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
   @Binding var image: UIImage?
-  
-  private let controller = UIImagePickerController()
-  
-  func makeCoordinator() -> Coordinator {
-    Coordinator(parent: self)
+  func makeUIViewController(context: Context) -> UIImagePickerController {
+    let picker = UIImagePickerController()
+    picker.delegate = context.coordinator
+    return picker
   }
   
+  func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
+  
+  func makeCoordinator() -> Coordinator {
+    Coordinator(self)
+  }
   class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     let parent: ImagePicker
     
-    init(parent: ImagePicker) {
+    init(_ parent: ImagePicker) {
       self.parent = parent
     }
     
@@ -27,17 +31,9 @@ struct ImagePicker: UIViewControllerRepresentable {
       parent.image = info[.originalImage] as? UIImage
       picker.dismiss(animated: true)
     }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
       picker.dismiss(animated: true)
     }
-  }
-  
-  func makeUIViewController(context: Context) -> some UIViewController {
-    controller.delegate = context.coordinator
-    return controller
-  }
-  
-  func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-    
   }
 }
