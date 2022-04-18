@@ -23,6 +23,7 @@ struct SettingsHeaderView: View {
       Spacer()
     }
     .frame(height: 80)
+    .padding()
     .background(Color.white)
   }
 }
