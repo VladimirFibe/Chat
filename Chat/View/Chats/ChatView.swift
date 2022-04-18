@@ -8,21 +8,27 @@
 import SwiftUI
 
 struct ChatView: View {
-    var body: some View {
-      VStack {
-        ScrollView {
-          ForEach(0 ..< 25) { item in
-            MessageView(me: item % 2 == 0)
-          }
+  @State var text = ""
+  var body: some View {
+    VStack {
+      ScrollView {
+        ForEach(0 ..< 25) { item in
+          MessageView(me: item % 2 == 0)
         }
       }
-      .navigationTitle("venom")
-      .navigationBarTitleDisplayMode(.inline)
+      ChatInputView(text: $text, action: sendMessage)
     }
+    .navigationTitle("venom")
+    .navigationBarTitleDisplayMode(.inline)
+  }
+  func sendMessage() {
+    print(text)
+    text = ""
+  }
 }
 
 struct ChatView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChatView()
-    }
+  static var previews: some View {
+    ChatView()
+  }
 }

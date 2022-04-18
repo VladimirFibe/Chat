@@ -36,6 +36,7 @@
 		1F342FF527BEC2A50049535E /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 1F342FF427BEC2A50049535E /* FirebaseStorageSwift-Beta */; };
 		1F6014A9280C6ED000B66F8E /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6014A8280C6ED000B66F8E /* ChatBubble.swift */; };
 		1F6014AB280C711200B66F8E /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6014AA280C711200B66F8E /* MessageView.swift */; };
+		1F72B47C280CE9A000D7219F /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72B47B280CE9A000D7219F /* ChatInputView.swift */; };
 		1FAD71C42809C7060079DDCF /* StatusSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD71C32809C7060079DDCF /* StatusSelectorView.swift */; };
 		1FAD71C8280A40960079DDCF /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD71C7280A40960079DDCF /* UserStatus.swift */; };
 		1FAD71CA280A5C4C0079DDCF /* UserStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD71C9280A5C4C0079DDCF /* UserStatusViewModel.swift */; };
@@ -71,6 +72,7 @@
 		1F342FE927BEC1ED0049535E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1F6014A8280C6ED000B66F8E /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		1F6014AA280C711200B66F8E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		1F72B47B280CE9A000D7219F /* ChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputView.swift; sourceTree = "<group>"; };
 		1FAD71C32809C7060079DDCF /* StatusSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSelectorView.swift; sourceTree = "<group>"; };
 		1FAD71C7280A40960079DDCF /* UserStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 		1FAD71C9280A5C4C0079DDCF /* UserStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusViewModel.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				027AADF927F341F500AE3A61 /* ChatView.swift */,
 				1F6014A8280C6ED000B66F8E /* ChatBubble.swift */,
 				1F6014AA280C711200B66F8E /* MessageView.swift */,
+				1F72B47B280CE9A000D7219F /* ChatInputView.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				1FAD71D5280AA54F0079DDCF /* ConversationCell.swift in Sources */,
 				027AADF827F341D900AE3A61 /* SettingsView.swift in Sources */,
 				02552B7527F370270080BABB /* SettingsCell.swift in Sources */,
+				1F72B47C280CE9A000D7219F /* ChatInputView.swift in Sources */,
 				1F18EFAD280B41360006AE59 /* UIApplication + Extensions.swift in Sources */,
 				1FAD71D1280AA3770079DDCF /* UserCell.swift in Sources */,
 				1F6014A9280C6ED000B66F8E /* ChatBubble.swift in Sources */,
