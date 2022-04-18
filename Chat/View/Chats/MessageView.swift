@@ -8,27 +8,27 @@
 import SwiftUI
 
 struct MessageView: View {
-  var me: Bool
+  let message: Message
     var body: some View {
       HStack {
-        if me {
+        if message.me {
           Spacer()
-          Text("Ты всегда будешь меня любить?")
+          Text(message.text)
             .padding(12)
             .background(Color(.systemBlue))
             .foregroundColor(.white)
             .font(.system(size: 15))
-            .clipShape(ChatBubble(me: me))
+            .clipShape(ChatBubble(me: message.me))
             .padding(.trailing)
             .padding(.leading, 100)
         } else {
           HStack(alignment: .bottom, spacing: 10) {
             AvatarView(image: Image("profile"), width: 32)
-            Text("Бла бла бла")
+            Text(message.text)
               .padding(12)
               .background(Color(.systemGray5))
               .font(.system(size: 15))
-              .clipShape(ChatBubble(me: me))
+              .clipShape(ChatBubble(me: message.me))
           }
           .padding(.leading)
           .padding(.trailing, 80)
@@ -40,6 +40,6 @@ struct MessageView: View {
 
 struct MessageView_Previews: PreviewProvider {
     static var previews: some View {
-      MessageView(me: true)
+      MessageView(message: Message())
     }
 }

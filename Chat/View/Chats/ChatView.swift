@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ChatView: View {
+  @ObservedObject var viewModel = ChatViewModel()
   @State var text = ""
   var body: some View {
     VStack {
       ScrollView {
-        ForEach(0 ..< 25) { item in
-          MessageView(me: item % 2 == 0)
+        ForEach(viewModel.messages) { message in
+          MessageView(message: message)
         }
       }
       ChatInputView(text: $text, action: sendMessage)
@@ -22,7 +23,7 @@ struct ChatView: View {
     .navigationBarTitleDisplayMode(.inline)
   }
   func sendMessage() {
-    print(text)
+    viewModel.sendMessage(text)
     text = ""
   }
 }

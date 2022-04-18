@@ -22,6 +22,7 @@ struct ChatInputView: View {
             Text("Send")
               .bold()
           }
+          .disabled(text.isEmpty)
         }
         .padding()
       }
