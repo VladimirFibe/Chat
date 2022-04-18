@@ -9,7 +9,15 @@ import SwiftUI
 
 struct ChatView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      VStack {
+        ScrollView {
+          ForEach(0 ..< 25) { item in
+            MessageView(me: item % 2 == 0)
+          }
+        }
+      }
+      .navigationTitle("venom")
+      .navigationBarTitleDisplayMode(.inline)
     }
 }
 

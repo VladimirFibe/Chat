@@ -13,7 +13,7 @@ struct MessageView: View {
       HStack {
         if me {
           Spacer()
-          Text("Hello, World!")
+          Text("Ты всегда будешь меня любить?")
             .padding(12)
             .background(Color(.systemBlue))
             .foregroundColor(.white)
