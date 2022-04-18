@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AuthView: View {
+  @ObservedObject var viewModel = AuthViewModel()
   @State private var email = ""
   @State private var password = ""
   var body: some View {
@@ -55,6 +56,7 @@ struct AuthView: View {
   var signinButton: some View {
     Button {
       print(email, password)
+      viewModel.login()
     } label: {
       Text("Sign In")
         .frame(maxWidth: .infinity)
@@ -88,7 +90,4 @@ struct AuthView_Previews: PreviewProvider {
   }
 }
 
-extension Color {
-  static let darkGray = Color(.darkGray)
-}
 

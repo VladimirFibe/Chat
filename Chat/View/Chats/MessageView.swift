@@ -15,7 +15,7 @@ struct MessageView: View {
           Spacer()
           Text(message.text)
             .padding(12)
-            .background(Color(.systemBlue))
+            .background(Color.systemBlue)
             .foregroundColor(.white)
             .font(.system(size: 15))
             .clipShape(ChatBubble(me: message.me))
@@ -26,7 +26,7 @@ struct MessageView: View {
             AvatarView(image: Image("profile"), width: 32)
             Text(message.text)
               .padding(12)
-              .background(Color(.systemGray5))
+              .background(Color.systemGray5)
               .font(.system(size: 15))
               .clipShape(ChatBubble(me: message.me))
           }

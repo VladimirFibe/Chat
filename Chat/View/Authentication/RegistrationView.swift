@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RegistrationView: View {
   @Environment(\.dismiss) var dismiss
+  @ObservedObject var viewModel = AuthViewModel()
   @State private var email = ""
   @State private var password = ""
   @State private var username = ""
@@ -56,6 +57,7 @@ struct RegistrationView: View {
   var signupButton: some View {
     Button {
       print(email, password)
+      viewModel.register()
     } label: {
       Text("Sign Up")
         .frame(maxWidth: .infinity)
@@ -67,6 +69,7 @@ struct RegistrationView: View {
   
   var registerView: some View {
     Button {
+      viewModel.register()
       dismiss()
     } label: {
       Text("Already have an account? ") + Text("Sign In").bold()

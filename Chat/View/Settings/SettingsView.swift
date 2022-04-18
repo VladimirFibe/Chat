@@ -35,7 +35,7 @@ struct SettingsView: View {
     }
     .padding(.vertical)
     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-    .background(Color(.systemGroupedBackground))
+    .background(Color.systemGroupedBackground)
   }
 }
 

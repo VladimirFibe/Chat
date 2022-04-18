@@ -15,7 +15,7 @@ struct SearchBar: View {
       TextField("Search...", text: $text)
         .padding(.vertical, 8)
         .padding(.horizontal, 32)
-        .background(Color(.systemGray6))
+        .background(Color.systemGray6)
         .cornerRadius(8)
         .overlay(alignment: .leading, content: {
           Image(systemName: "magnifyingglass")

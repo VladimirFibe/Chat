@@ -42,7 +42,7 @@ struct MainMessagesView: View {
     } label: {
       Image(systemName: "gear")
         .font(.system(size: 24, weight: .bold))
-        .foregroundColor(Color(.label))
+        .foregroundColor(Color.label)
     }
     
   }
@@ -92,7 +92,7 @@ struct MainMessagesView: View {
             .font(.system(size: 16, weight: .bold))
           Text("Message sent to user")
             .font(.system(size: 14))
-            .foregroundColor(Color(.lightGray))
+            .foregroundColor(.lightGray)
         }
         Spacer()
         Text("22d")

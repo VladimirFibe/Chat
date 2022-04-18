@@ -26,13 +26,13 @@ struct StatusSelectorView: View {
             }) {
               StatusCell(item: item)
             }
-            .accentColor(.black)
+//            .accentColor(.black)
           }
         }
       }
       .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
-    .background(Color(.systemGroupedBackground))
+    .background(Color.systemGroupedBackground)
     .navigationTitle("Status")
     .navigationBarTitleDisplayMode(.inline)
   }

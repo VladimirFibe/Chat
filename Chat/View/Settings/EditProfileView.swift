@@ -20,7 +20,7 @@ struct EditProfileView: View {
     }
     .padding(.vertical)
     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-    .background(Color(.systemGroupedBackground))
+    .background(Color.systemGroupedBackground)
     .navigationTitle("Edit Profile")
     .navigationBarTitleDisplayMode(.inline)
     .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {

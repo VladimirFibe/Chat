@@ -46,7 +46,7 @@ struct ConversationsView: View {
         .scaledToFit()
         .frame(width: 24, height: 24)
         .padding()
-        .background(Color(.systemBlue), in: Circle())
+        .background(Color.systemBlue, in: Circle())
         .tint(.white)
         .padding()
     }

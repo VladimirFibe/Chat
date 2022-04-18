@@ -14,7 +14,7 @@ struct ChatInputView: View {
       VStack {
         Rectangle()
           .frame(height: 0.75)
-          .foregroundColor(Color(.separator))
+          .foregroundColor(.separator)
         
         HStack {
           TextField("Message...", text: $text)
