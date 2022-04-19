@@ -10,6 +10,7 @@ import Firebase
 import UIKit
 
 class AuthViewModel: ObservableObject {
+  @Published var didAuthenticateUser = false
   func login() {
     print(#function)
   }
@@ -33,6 +34,7 @@ class AuthViewModel: ObservableObject {
           return
         }
         print("DEBUG: Successfully updated user info in firestore...")
+        self.didAuthenticateUser = true
       }
     }
   }

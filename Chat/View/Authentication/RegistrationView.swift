@@ -9,13 +9,21 @@ import SwiftUI
 
 struct RegistrationView: View {
   @Environment(\.dismiss) var dismiss
-  @ObservedObject var viewModel = AuthViewModel()
+  @EnvironmentObject var viewModel: AuthViewModel
   @State private var email = ""
   @State private var password = ""
   @State private var username = ""
   @State private var fullname = ""
+  
   var body: some View {
     VStack(alignment: .leading, spacing: 30.0) {
+      
+      NavigationLink(isActive: $viewModel.didAuthenticateUser) {
+        ProfilePhotoSelectorView()
+      } label: {
+        EmptyView()
+      }
+
       title
       
       fields
@@ -80,5 +88,6 @@ struct RegistrationView: View {
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
         RegistrationView()
+        .environmentObject(AuthViewModel())
     }
 }

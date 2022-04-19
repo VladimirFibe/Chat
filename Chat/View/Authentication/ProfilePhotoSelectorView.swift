@@ -11,7 +11,7 @@ struct ProfilePhotoSelectorView: View {
   @State private var imagePickerPresented = false
   @State private var selectedImage: UIImage?
   @State private var profileImage = Image("plus_photo")
-  @ObservedObject var viewModel = AuthViewModel()
+  @EnvironmentObject var viewModel: AuthViewModel
   var body: some View {
     VStack {
       button
@@ -64,6 +64,6 @@ struct ProfilePhotoSelectorView: View {
 struct ProfilePhotoSelectorView_Previews: PreviewProvider {
   static var previews: some View {
     ProfilePhotoSelectorView()
-//      .environmentObject(AuthViewModel())
+      .environmentObject(AuthViewModel())
   }
 }

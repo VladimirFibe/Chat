@@ -10,6 +10,7 @@ import Firebase
 
 @main
 struct ChatApp: App {
+  @StateObject var authViewModel = AuthViewModel()
   init() {
     FirebaseApp.configure()
   }
@@ -17,8 +18,8 @@ struct ChatApp: App {
     WindowGroup {
 //      MainTabView()
 //      EditProfileView()
-//      AuthView()
-ProfilePhotoSelectorView()
+      AuthView()
+        .environmentObject(authViewModel)
     }
   }
 }
