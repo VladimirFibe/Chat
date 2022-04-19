@@ -34,7 +34,9 @@ class AuthViewModel: ObservableObject {
           return
         }
         print("DEBUG: Successfully updated user info in firestore...")
-        self.didAuthenticateUser = true
+        DispatchQueue.main.async {
+          self.didAuthenticateUser = true
+        }
       }
     }
   }
@@ -44,7 +46,12 @@ class AuthViewModel: ObservableObject {
   }
   
   func uploadProfileImage(_ image: UIImage) {
-    print(#function)
+    guard let uid = Auth.auth().currentUser?.uid else { return }
+    ImageUploader.uploadImage(image) { url in
+      Firestore.firestore().collection("users").document(uid).updateData(["profileImageUrl": url]) { _ in
+        print("DEBUG: Successfully updated user profileImageUrl")
+      }
+    }
   }
   
   func resetPassword() {
