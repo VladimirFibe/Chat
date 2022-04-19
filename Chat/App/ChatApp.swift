@@ -18,7 +18,8 @@ struct ChatApp: App {
     WindowGroup {
 //      MainTabView()
 //      EditProfileView()
-      AuthView()
+//      AuthView()
+      AuthOrMainView()
         .environmentObject(authViewModel)
     }
   }

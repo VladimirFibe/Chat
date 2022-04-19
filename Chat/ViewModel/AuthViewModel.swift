@@ -11,6 +11,7 @@ import UIKit
 
 class AuthViewModel: ObservableObject {
   @Published var didAuthenticateUser = false
+  @Published var addPhoto = true
   func login() {
     print(#function)
   }
@@ -22,6 +23,7 @@ class AuthViewModel: ObservableObject {
         return
       }
       print("DEBUG: Successfully registered user with firebase")
+      self.addPhoto = false
       guard let user = result?.user else { return }
       let data: [String: Any] = [
         "email": email,
@@ -50,6 +52,9 @@ class AuthViewModel: ObservableObject {
     ImageUploader.uploadImage(image) { url in
       Firestore.firestore().collection("users").document(uid).updateData(["profileImageUrl": url]) { _ in
         print("DEBUG: Successfully updated user profileImageUrl")
+        DispatchQueue.main.async {
+          self.addPhoto = true
+        }
       }
     }
   }
