@@ -49,6 +49,8 @@
 		E8492582280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8492581280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift */; };
 		E8492585280E3FC600ABF5FF /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8492584280E3FC600ABF5FF /* ImageUploader.swift */; };
 		E8492588280E4BC600ABF5FF /* AuthOrMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8492587280E4BC600ABF5FF /* AuthOrMainView.swift */; };
+		E849258A280E56A400ABF5FF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E8492589280E56A400ABF5FF /* README.md */; };
+		E849258E280E573700ABF5FF /* MakeItSo.png in Resources */ = {isa = PBXBuildFile; fileRef = E849258D280E573700ABF5FF /* MakeItSo.png */; };
 		E86D89F1280DC2F800BB9E7B /* Color + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */; };
 		E86D89F4280DC5E400BB9E7B /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = E86D89F3280DC5E400BB9E7B /* FirebaseFunctions */; };
 		E86D89F6280DC64400BB9E7B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */; };
@@ -93,6 +95,8 @@
 		E8492581280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
 		E8492584280E3FC600ABF5FF /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		E8492587280E4BC600ABF5FF /* AuthOrMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthOrMainView.swift; sourceTree = "<group>"; };
+		E8492589280E56A400ABF5FF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E849258D280E573700ABF5FF /* MakeItSo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MakeItSo.png; sourceTree = "<group>"; };
 		E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extensions.swift"; sourceTree = "<group>"; };
 		E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +217,8 @@
 		1F342FCF27BE91310049535E = {
 			isa = PBXGroup;
 			children = (
+				E849258B280E570B00ABF5FF /* assets */,
+				E8492589280E56A400ABF5FF /* README.md */,
 				1F342FDA27BE91320049535E /* Chat */,
 				1F342FD927BE91320049535E /* Products */,
 				E86D89F2280DC5E400BB9E7B /* Frameworks */,
@@ -287,6 +293,22 @@
 				E8492587280E4BC600ABF5FF /* AuthOrMainView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		E849258B280E570B00ABF5FF /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				E849258C280E573700ABF5FF /* logo */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		E849258C280E573700ABF5FF /* logo */ = {
+			isa = PBXGroup;
+			children = (
+				E849258D280E573700ABF5FF /* MakeItSo.png */,
+			);
+			path = logo;
 			sourceTree = "<group>";
 		};
 		E86D89F2280DC5E400BB9E7B /* Frameworks */ = {
@@ -367,6 +389,8 @@
 			files = (
 				1F342FE327BE91330049535E /* Preview Assets.xcassets in Resources */,
 				1F342FE027BE91330049535E /* Assets.xcassets in Resources */,
+				E849258E280E573700ABF5FF /* MakeItSo.png in Resources */,
+				E849258A280E56A400ABF5FF /* README.md in Resources */,
 				1F342FEA27BEC1ED0049535E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
