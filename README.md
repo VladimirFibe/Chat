@@ -44,9 +44,9 @@ This is not an official Google product.
 <!-- CONTACT -->
 ## Contact
 
-Peter Friese - [@peterfriese](https://twitter.com/peterfriese)
+Peter Friese - [@peterfriese](https://twitter.com/fibe)
 
-Project Link: [https://github.com/peterfriese/MakeItSo](https://github.com/peterfriese/MakeItSo)
+Project Link: [https://github.com/VladimirFibe/Chat](https://github.com/VladimirFibe/Chat)
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -56,29 +56,29 @@ Project Link: [https://github.com/peterfriese/MakeItSo](https://github.com/peter
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[xcode-shield]: https://img.shields.io/badge/xcode-v11.4.1-blue
+[xcode-shield]: https://img.shields.io/badge/xcode-v13.3.1-blue
 [xcode-url]: https://developer.apple.com/xcode/
 
-[swift-shield]: https://img.shields.io/badge/swift-v5.2-%23fe4b2d
+[swift-shield]: https://img.shields.io/badge/swift-v5.6-%23fe4b2d
 [swift-url]: https://swift.org/
 
-[contributors-shield]: https://img.shields.io/github/contributors/peterfriese/MakeItSo.svg?style=flat-square
-[contributors-url]: https://github.com/peterfriese/MakeItSo/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/VladimirFibe/Chato.svg?style=flat-square
+[contributors-url]: https://github.com/VladimirFibe/Chat/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/peterfriese/MakeItSo.svg?style=flat-square
-[forks-url]: https://github.com/peterfriese/MakeItSo/network/members
+[forks-shield]: https://img.shields.io/github/forks/VladimirFibe/Chat.svg?style=flat-square
+[forks-url]: https://github.com/VladimirFibe/Chat/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/peterfriese/MakeItSo.svg?style=flat-square
-[stars-url]: https://github.com/peterfriese/MakeItSo/stargazers
+[stars-shield]: https://img.shields.io/github/stars/VladimirFibe/Chat.svg?style=flat-square
+[stars-url]: https://github.com/VladimirFibe/Chat/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/peterfriese/MakeItSo.svg?style=flat-square
-[issues-url]: https://github.com/peterfriese/MakeItSo/issues
+[issues-shield]: https://img.shields.io/github/issues/VladimirFibe/Chat.svg?style=flat-square
+[issues-url]: https://github.com/VladimirFibe/Chat/issues
 
-[license-shield]: https://img.shields.io/github/license/peterfriese/MakeItSo.svg?style=flat-square
-[license-url]: https://github.com/peterfriese/MakeItSo/blob/master/LICENSE
+[license-shield]: https://img.shields.io/github/license/VladimirFibe/Chat.svg?style=flat-square
+[license-url]: https://github.com/VladimirFibe/Chat/blob/master/LICENSE
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/peterfriese
+[linkedin-url]: https://linkedin.com/in/fibe
 [product-screenshot]: assets/screenshot.png
 [product-demo]: assets/demo.gif
 [product-screenshot]: assets/screenshot.png "Screenshot of Make It So, a replication of the iOS Reminders app"
