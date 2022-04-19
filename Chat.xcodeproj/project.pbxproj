@@ -46,6 +46,7 @@
 		1FAD71D1280AA3770079DDCF /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD71D0280AA3770079DDCF /* UserCell.swift */; };
 		1FAD71D3280AA3C10079DDCF /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD71D2280AA3C10079DDCF /* AvatarView.swift */; };
 		1FAD71D5280AA54F0079DDCF /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD71D4280AA54F0079DDCF /* ConversationCell.swift */; };
+		E8492582280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8492581280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift */; };
 		E86D89F1280DC2F800BB9E7B /* Color + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */; };
 		E86D89F4280DC5E400BB9E7B /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = E86D89F3280DC5E400BB9E7B /* FirebaseFunctions */; };
 		E86D89F6280DC64400BB9E7B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */; };
@@ -87,6 +88,7 @@
 		1FAD71D0280AA3770079DDCF /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		1FAD71D2280AA3C10079DDCF /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		1FAD71D4280AA54F0079DDCF /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		E8492581280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
 		E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extensions.swift"; sourceTree = "<group>"; };
 		E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +191,7 @@
 				0297566F27F2E7FB00131C61 /* AuthView.swift */,
 				027AADED27F32C8500AE3A61 /* CustomTextField.swift */,
 				0297567127F2E82900131C61 /* RegistrationView.swift */,
+				E8492581280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				027AADF827F341D900AE3A61 /* SettingsView.swift in Sources */,
 				02552B7527F370270080BABB /* SettingsCell.swift in Sources */,
 				1F72B47C280CE9A000D7219F /* ChatInputView.swift in Sources */,
+				E8492582280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift in Sources */,
 				1F18EFAD280B41360006AE59 /* UIApplication + Extensions.swift in Sources */,
 				E86D89F6280DC64400BB9E7B /* AuthViewModel.swift in Sources */,
 				1F72B47F280CF10200D7219F /* Message.swift in Sources */,

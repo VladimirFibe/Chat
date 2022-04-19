@@ -57,7 +57,7 @@ struct RegistrationView: View {
   var signupButton: some View {
     Button {
       print(email, password)
-      viewModel.register()
+      viewModel.register(withEmail: email, password: password, fullname: fullname, username: username)
     } label: {
       Text("Sign Up")
         .frame(maxWidth: .infinity)
@@ -69,7 +69,6 @@ struct RegistrationView: View {
   
   var registerView: some View {
     Button {
-      viewModel.register()
       dismiss()
     } label: {
       Text("Already have an account? ") + Text("Sign In").bold()
