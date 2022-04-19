@@ -68,7 +68,9 @@ struct AuthView: View {
   var forgotPasswordView: some View {
     HStack {
       Spacer()
-      NavigationLink(destination: Text("Pass")) {
+      Button(action: {
+        AuthViewModel.shared.resetPassword(withEmail: email)
+      }) {
         Text("Forgot Password?")
       }
     }

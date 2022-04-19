@@ -11,6 +11,7 @@ import UIKit
 import Combine
 
 class AuthViewModel: ObservableObject {
+  let personCollection = Firestore.firestore().collection("persons")
   @Published var user: User?
   @Published var didAuthenticateUser = false
   @Published var addPhoto = true
@@ -21,8 +22,8 @@ class AuthViewModel: ObservableObject {
   static let shared = AuthViewModel()
   private var cancellables = Set<AnyCancellable>()
   private var handle: AuthStateDidChangeListenerHandle?
+  
   private init() {
-    print(#function)
     registerStateListener()
     $user
       .compactMap { $0?.isAnonymous }
@@ -31,25 +32,23 @@ class AuthViewModel: ObservableObject {
   }
   
   func signIn() {
-    print(#function)
     if Auth.auth().currentUser == nil {
       Auth.auth().signInAnonymously()
     }
   }
+  
   func registerStateListener() {
     if let handle = handle {
       Auth.auth().removeStateDidChangeListener(handle)
     }
-    self.handle = Auth.auth().addStateDidChangeListener({ auth, user in
-      print("DEBUG: Sign in state has changed.")
+    self.handle = Auth.auth().addStateDidChangeListener{ _, user in
       self.user = user
-      if let user = user {
-        print("DEBUG", user.uid)
-      } else {
-        print("DEBUG: User signed out")
+      if user == nil {
         self.signIn()
+      } else {
+        self.fetchPerson()
       }
-    })
+    }
   }
   func login(withEmail email: String, password: String) {
     Auth.auth().signIn(withEmail: email, password: password) { result, error in
@@ -66,20 +65,17 @@ class AuthViewModel: ObservableObject {
         print("DEBUG: \(error.localizedDescription)")
         return
       }
-      print("DEBUG: Successfully registered user with firebase")
-      self.addPhoto = false
-      guard let user = result?.user else { return }
+      guard let uid = result?.user.uid else { return }
       let data: [String: Any] = [
         "email": email,
         "username": username,
         "fullname": fullname
       ]
-      Firestore.firestore().collection("users").document(user.uid).setData(data) { error in
+      self.personCollection.document(uid).setData(data) { error in
         if let error = error {
           print("DEBUG: \(error.localizedDescription)")
           return
         }
-        print("DEBUG: Successfully updated user info in firestore...")
         DispatchQueue.main.async {
           self.didAuthenticateUser = true
         }
@@ -89,18 +85,12 @@ class AuthViewModel: ObservableObject {
   
   func signout() {
     try? Auth.auth().signOut()
-//    do {
-//      try Auth.auth().signOut()
-//    } catch {
-//      print("Error when trying to sign out: \(error.localizedDescription)")
-//    }
   }
   
   func uploadProfileImage(_ image: UIImage) {
     guard let uid = Auth.auth().currentUser?.uid else { return }
     ImageUploader.uploadImage(image) { url in
-      Firestore.firestore().collection("users").document(uid).updateData(["profileImageUrl": url]) { _ in
-        print("DEBUG: Successfully updated user profileImageUrl")
+      self.personCollection.document(uid).updateData(["profileImageUrl": url]) { _ in
         DispatchQueue.main.async {
           self.addPhoto = true
         }
@@ -108,7 +98,21 @@ class AuthViewModel: ObservableObject {
     }
   }
   
-  func resetPassword() {
+  func resetPassword(withEmail email: String) {
+    Auth.auth().sendPasswordReset(withEmail: email) { error in
+      if let error = error {
+        print("DEBUG: \(error.localizedDescription)")
+        return
+      }
+    }
+  }
+  
+  func fetchPerson() {
     print(#function)
+    guard let uid = user?.uid else { return }
+    personCollection.document(uid).getDocument { snapshot, error in
+      guard let data = snapshot?.data() else { return }
+      print(data)
+    }
   }
 }
