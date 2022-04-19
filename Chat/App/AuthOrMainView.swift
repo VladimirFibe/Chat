@@ -11,7 +11,7 @@ struct AuthOrMainView: View {
   @EnvironmentObject var viewModel: AuthViewModel
   var body: some View {
     Group {
-      if viewModel.addPhoto {
+      if viewModel.canlogin {
         MainTabView()
       } else {
         AuthView()
@@ -23,6 +23,6 @@ struct AuthOrMainView: View {
 struct AuthOrMainView_Previews: PreviewProvider {
   static var previews: some View {
     AuthOrMainView()
-      .environmentObject(AuthViewModel())
+      .environmentObject(AuthViewModel.shared)
   }
 }

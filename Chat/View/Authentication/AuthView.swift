@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AuthView: View {
-  @ObservedObject var viewModel = AuthViewModel()
   @State private var email = ""
   @State private var password = ""
   var body: some View {
@@ -56,7 +55,7 @@ struct AuthView: View {
   var signinButton: some View {
     Button {
       print(email, password)
-      viewModel.login()
+      AuthViewModel.shared.login(withEmail: email, password: password)
     } label: {
       Text("Sign In")
         .frame(maxWidth: .infinity)

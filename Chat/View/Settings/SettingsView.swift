@@ -21,7 +21,7 @@ struct SettingsView: View {
       }
       .background(Color.white)
       Button {
-        
+        AuthViewModel.shared.signout()
       } label: {
         Text("Log Out")
           .font(.system(size: 16, weight: .semibold))

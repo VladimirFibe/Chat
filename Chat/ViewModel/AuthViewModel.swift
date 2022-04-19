@@ -8,15 +8,59 @@
 import Foundation
 import Firebase
 import UIKit
+import Combine
 
 class AuthViewModel: ObservableObject {
+  @Published var user: User?
   @Published var didAuthenticateUser = false
   @Published var addPhoto = true
-  func login() {
+  @Published var isAnonymous = true
+  var canlogin: Bool {
+    !isAnonymous && addPhoto
+  }
+  static let shared = AuthViewModel()
+  private var cancellables = Set<AnyCancellable>()
+  private var handle: AuthStateDidChangeListenerHandle?
+  private init() {
     print(#function)
+    registerStateListener()
+    $user
+      .compactMap { $0?.isAnonymous }
+      .assign(to: \.isAnonymous, on: self)
+      .store(in: &cancellables)
+  }
+  
+  func signIn() {
+    print(#function)
+    if Auth.auth().currentUser == nil {
+      Auth.auth().signInAnonymously()
+    }
+  }
+  func registerStateListener() {
+    if let handle = handle {
+      Auth.auth().removeStateDidChangeListener(handle)
+    }
+    self.handle = Auth.auth().addStateDidChangeListener({ auth, user in
+      print("DEBUG: Sign in state has changed.")
+      self.user = user
+      if let user = user {
+        print("DEBUG", user.uid)
+      } else {
+        print("DEBUG: User signed out")
+        self.signIn()
+      }
+    })
+  }
+  func login(withEmail email: String, password: String) {
+    Auth.auth().signIn(withEmail: email, password: password) { result, error in
+      if let error = error {
+        print("DEBUG: \(error.localizedDescription)")
+      }
+    }
   }
   
   func register(withEmail email: String, password: String, fullname: String, username: String) {
+    addPhoto = false
     Auth.auth().createUser(withEmail: email, password: password) { result, error in
       if let error = error {
         print("DEBUG: \(error.localizedDescription)")
@@ -44,7 +88,12 @@ class AuthViewModel: ObservableObject {
   }
   
   func signout() {
-    print(#function)
+    try? Auth.auth().signOut()
+//    do {
+//      try Auth.auth().signOut()
+//    } catch {
+//      print("Error when trying to sign out: \(error.localizedDescription)")
+//    }
   }
   
   func uploadProfileImage(_ image: UIImage) {

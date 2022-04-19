@@ -64,6 +64,6 @@ struct ProfilePhotoSelectorView: View {
 struct ProfilePhotoSelectorView_Previews: PreviewProvider {
   static var previews: some View {
     ProfilePhotoSelectorView()
-      .environmentObject(AuthViewModel())
+      .environmentObject(AuthViewModel.shared)
   }
 }

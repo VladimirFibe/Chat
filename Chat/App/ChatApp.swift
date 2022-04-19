@@ -10,7 +10,7 @@ import Firebase
 
 @main
 struct ChatApp: App {
-  @StateObject var authViewModel = AuthViewModel()
+  @StateObject var authViewModel = AuthViewModel.shared
   init() {
     FirebaseApp.configure()
   }

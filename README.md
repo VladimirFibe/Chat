@@ -28,9 +28,6 @@
   </p>
 </p>
 
-
-
-
 <!-- LICENSE -->
 ## License
 
@@ -44,7 +41,7 @@ This is not an official Google product.
 <!-- CONTACT -->
 ## Contact
 
-Peter Friese - [@peterfriese](https://twitter.com/fibe)
+Peter Friese - [@macservice](https://twitter.com/macservicekz)
 
 Project Link: [https://github.com/VladimirFibe/Chat](https://github.com/VladimirFibe/Chat)
 
@@ -52,7 +49,7 @@ Project Link: [https://github.com/VladimirFibe/Chat](https://github.com/Vladimir
 
 ## Acknowledgements
 
-* The application icon is based on [Check](https://thenounproject.com/term/check/1905028/) by [Robert Won](https://thenounproject.com/robertwon/) from the [Noun Project](https://thenounproject.com/)
+* The application icon is based on [SwiftUI Chat Pro](https://appstuff.teachable.com/p/swiftui-chat-pro) [Check](https://thenounproject.com/term/check/1905028/) by [Robert Won](https://thenounproject.com/robertwon/) from the [Noun Project](https://thenounproject.com/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
