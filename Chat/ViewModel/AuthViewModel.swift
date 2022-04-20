@@ -11,7 +11,7 @@ import UIKit
 import Combine
 
 class AuthViewModel: ObservableObject {
-  let personCollection = Firestore.firestore().collection("persons")
+  
   @Published var user: User?
   @Published var didAuthenticateUser = false
   @Published var addPhoto = true
@@ -72,7 +72,7 @@ class AuthViewModel: ObservableObject {
         "username": username,
         "fullname": fullname
       ]
-      self.personCollection.document(uid).setData(data) { error in
+      COLLECTION_PERSONS.document(uid).setData(data) { error in
         if let error = error {
           print("DEBUG: \(error.localizedDescription)")
           return
@@ -91,9 +91,10 @@ class AuthViewModel: ObservableObject {
   func uploadProfileImage(_ image: UIImage) {
     guard let uid = Auth.auth().currentUser?.uid else { return }
     ImageUploader.uploadImage(image) { url in
-      self.personCollection.document(uid).updateData(["profileImageUrl": url]) { _ in
+      COLLECTION_PERSONS.document(uid).updateData(["profileImageUrl": url]) { _ in
         DispatchQueue.main.async {
           self.addPhoto = true
+          self.person.profileImageUrl = url
         }
       }
     }
@@ -111,7 +112,7 @@ class AuthViewModel: ObservableObject {
   func fetchPerson() {
     print(#function)
     guard let uid = user?.uid else { return }
-    personCollection.document(uid).getDocument { snapshot, error in
+    COLLECTION_PERSONS.document(uid).getDocument { snapshot, error in
       guard let person = try? snapshot?.data(as: Person.self) else { return }
       self.person = person
     }

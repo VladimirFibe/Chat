@@ -70,6 +70,7 @@ struct EditProfileView: View {
   }
   func loadImage() {
     if let image = image {
+      AuthViewModel.shared.uploadProfileImage(image)
       avatar = Image(uiImage: image)
     }
   }
