@@ -16,6 +16,7 @@ class AuthViewModel: ObservableObject {
   @Published var didAuthenticateUser = false
   @Published var addPhoto = true
   @Published var isAnonymous = true
+  @Published var person = Person()
   var canlogin: Bool {
     !isAnonymous && addPhoto
   }
@@ -45,7 +46,7 @@ class AuthViewModel: ObservableObject {
       self.user = user
       if user == nil {
         self.signIn()
-      } else {
+      } else if !self.isAnonymous {
         self.fetchPerson()
       }
     }
@@ -111,8 +112,8 @@ class AuthViewModel: ObservableObject {
     print(#function)
     guard let uid = user?.uid else { return }
     personCollection.document(uid).getDocument { snapshot, error in
-      guard let data = snapshot?.data() else { return }
-      print(data)
+      guard let person = try? snapshot?.data(as: Person.self) else { return }
+      self.person = person
     }
   }
 }

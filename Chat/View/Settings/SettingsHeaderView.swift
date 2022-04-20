@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct SettingsHeaderView: View {
+  let person: Person
   var body: some View {
     HStack {
-      AvatarView(image: Image("profile"))
+      AvatarView(url: person.profileImageUrl)
 
       VStack(alignment: .leading, spacing: 4) {
-        Text("Eddie Brock")
+        Text(person.fullname)
           .font(.system(size: 18))
           .foregroundColor(.black)
         Text("Available")
@@ -30,6 +31,6 @@ struct SettingsHeaderView: View {
 
 struct SettingsHeaderView_Previews: PreviewProvider {
   static var previews: some View {
-    SettingsHeaderView()
+    SettingsHeaderView(person: Person())
   }
 }

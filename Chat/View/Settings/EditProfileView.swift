@@ -12,6 +12,7 @@ struct EditProfileView: View {
   @State private var showImagePicker = false
   @State private var image: UIImage?
   @State private var avatar = Image("profile")
+  @EnvironmentObject var viewModel: AuthViewModel
   var body: some View {
     VStack(spacing: 20.0) {
       header
@@ -31,7 +32,7 @@ struct EditProfileView: View {
     VStack(alignment: .leading) {
       HStack(spacing: 20.0) {
         VStack {
-          AvatarView(image: avatar)
+          AvatarView(url: viewModel.person.profileImageUrl)
             
           Button {
             showImagePicker.toggle()
@@ -77,5 +78,6 @@ struct EditProfileView: View {
 struct EditProfileView_Previews: PreviewProvider {
   static var previews: some View {
     EditProfileView()
+      .environmentObject(AuthViewModel.shared)
   }
 }

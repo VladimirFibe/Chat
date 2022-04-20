@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct AvatarView: View {
-  let image: Image
+  var url: String
   var width = 64.0
   var body: some View {
-    image
-      .resizable()
-      .scaledToFill()
-      .frame(width: width, height: width)
-      .clipShape(Circle())
+    AsyncImage(url:  URL(string: url)) { image in
+      image
+        .resizable()
+        .scaledToFill()
+        .frame(width: width, height: width)
+        .clipShape(Circle())
+    } placeholder: {
+      ProgressView()
+    }
   }
 }
 
 struct AvatarView_Previews: PreviewProvider {
   static var previews: some View {
-    AvatarView(image: Image("profile"))
+    AvatarView(url: "")
   }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct UserCell: View {
   var body: some View {
       HStack {
-        AvatarView(image: Image("profile"), width: 48.0)
+        AvatarView(url: "", width: 48.0)
         VStack(alignment: .leading, spacing: 4.0) {
           Text("Venom")
             .font(.system(size: 14, weight: .semibold))

@@ -11,7 +11,7 @@ struct ConversationCell: View {
   var body: some View {
     VStack(alignment: .leading) {
       HStack {
-        AvatarView(image: Image("profile"))
+        AvatarView(url: "")
         VStack(alignment: .leading, spacing: 4.0) {
           Text("Eddie Brock")
             .font(.system(size: 14, weight: .semibold))

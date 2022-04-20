@@ -23,7 +23,7 @@ struct MessageView: View {
             .padding(.leading, 100)
         } else {
           HStack(alignment: .bottom, spacing: 10) {
-            AvatarView(image: Image("profile"), width: 32)
+            AvatarView(url: "", width: 32)
             Text(message.text)
               .padding(12)
               .background(Color.systemGray5)

@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct SettingsView: View {
+  @EnvironmentObject var viewModel: AuthViewModel
   var body: some View {
     VStack(spacing: 20.0) {
       NavigationLink(destination: EditProfileView()) {
-        SettingsHeaderView()
+        SettingsHeaderView(person: viewModel.person)
       }
       VStack(spacing: 0.0) {
         ForEach(SettingsCellViewModel.allCases) { viewModel in
@@ -21,7 +22,7 @@ struct SettingsView: View {
       }
       .background(Color.white)
       Button {
-        AuthViewModel.shared.signout()
+        viewModel.signout()
       } label: {
         Text("Log Out")
           .font(.system(size: 16, weight: .semibold))
@@ -41,6 +42,7 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
   static var previews: some View {
-    MainTabView()
+    SettingsView()
+      .environmentObject(AuthViewModel.shared)
   }
 }

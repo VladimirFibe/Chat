@@ -54,6 +54,7 @@
 		E86D89F1280DC2F800BB9E7B /* Color + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */; };
 		E86D89F4280DC5E400BB9E7B /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = E86D89F3280DC5E400BB9E7B /* FirebaseFunctions */; };
 		E86D89F6280DC64400BB9E7B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */; };
+		E8CCC923280F2A810064962F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCC922280F2A810064962F /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +100,7 @@
 		E849258D280E573700ABF5FF /* MakeItSo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MakeItSo.png; sourceTree = "<group>"; };
 		E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extensions.swift"; sourceTree = "<group>"; };
 		E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		E8CCC922280F2A810064962F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				1F72B47E280CF10200D7219F /* Message.swift */,
+				E8CCC922280F2A810064962F /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				1F72B481280CF18600D7219F /* ChatViewModel.swift in Sources */,
 				E8492585280E3FC600ABF5FF /* ImageUploader.swift in Sources */,
 				027AADF627F341CE00AE3A61 /* ChannelsView.swift in Sources */,
+				E8CCC923280F2A810064962F /* Person.swift in Sources */,
 				1F18EFAB280B3BC20006AE59 /* SearchBar.swift in Sources */,
 				027AADF127F33FF700AE3A61 /* MainTabView.swift in Sources */,
 				027AADFA27F341F500AE3A61 /* ChatView.swift in Sources */,
