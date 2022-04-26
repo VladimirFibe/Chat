@@ -14,7 +14,7 @@ struct ConversationsView: View {
   var body: some View {
     ScrollView {
       VStack {
-        ForEach(0 ..< 25) { item in
+        ForEach(0 ..< 3) { item in
           NavigationLink(destination: ChatView(friend: MOCK_PERSON)) {
             ConversationCell(person: MOCK_PERSON)
           }

@@ -8,7 +8,7 @@
 import FirebaseFirestoreSwift
 import Firebase
 
-struct Message: Identifiable {
+struct Message: Identifiable, Decodable {
   @DocumentID var id: String?
   var text: String
   var from: String

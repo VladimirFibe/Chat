@@ -20,7 +20,7 @@ struct ChatView: View {
     VStack {
       ScrollView {
         ForEach(viewModel.messages) { message in
-          MessageView(message: message, url: friend.profileImageUrl)
+          MessageView(viewModel: MessageViewModel(message: message), url: friend.profileImageUrl)
         }
       }
       ChatInputView(text: $text, action: sendMessage)
