@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MessageViewModel {
   let message: Message
-  
+  let url: String
   var currentUid: String {
     AuthViewModel.shared.person.id ?? ""
   }
@@ -25,8 +25,6 @@ struct MessageViewModel {
 
 struct MessageView: View {
   let viewModel: MessageViewModel
-  let url: String
-  
   var body: some View {
     HStack {
       if viewModel.me {
@@ -41,7 +39,7 @@ struct MessageView: View {
           .padding(.leading, 100)
       } else {
         HStack(alignment: .bottom, spacing: 10) {
-          AvatarView(url: url, width: 32)
+          AvatarView(url: viewModel.url, width: 32)
           Text(viewModel.text)
             .padding(12)
             .background(Color.systemGray5)
