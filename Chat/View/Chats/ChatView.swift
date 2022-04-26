@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct ChatView: View {
-  @ObservedObject var viewModel = ChatViewModel()
+  private let friend: Person
+  @ObservedObject var viewModel: ChatViewModel
   @State var text = ""
+  
+  init(friend: Person) {
+    self.friend = friend
+    self.viewModel = ChatViewModel(friend: friend)
+  }
   var body: some View {
     VStack {
       ScrollView {
         ForEach(viewModel.messages) { message in
-          MessageView(message: message)
+          MessageView(message: message, url: friend.profileImageUrl)
         }
       }
       ChatInputView(text: $text, action: sendMessage)
     }
-    .navigationTitle("venom")
+    .navigationTitle(friend.fullname)
     .navigationBarTitleDisplayMode(.inline)
   }
   func sendMessage() {
@@ -27,9 +33,9 @@ struct ChatView: View {
     text = ""
   }
 }
-
-struct ChatView_Previews: PreviewProvider {
-  static var previews: some View {
-    ChatView()
-  }
-}
+//
+//struct ChatView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    ChatView(friend: .constant(Person()))
+//  }
+//}

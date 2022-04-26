@@ -8,27 +8,31 @@
 import SwiftUI
 
 struct MessageView: View {
+  var me: Bool {
+    true
+  }
   let message: Message
+  let url: String
     var body: some View {
       HStack {
-        if message.me {
+        if me {
           Spacer()
           Text(message.text)
             .padding(12)
             .background(Color.systemBlue)
             .foregroundColor(.white)
             .font(.system(size: 15))
-            .clipShape(ChatBubble(me: message.me))
+            .clipShape(ChatBubble(me: me))
             .padding(.trailing)
             .padding(.leading, 100)
         } else {
           HStack(alignment: .bottom, spacing: 10) {
-            AvatarView(url: "", width: 32)
+            AvatarView(url: url, width: 32)
             Text(message.text)
               .padding(12)
               .background(Color.systemGray5)
               .font(.system(size: 15))
-              .clipShape(ChatBubble(me: message.me))
+              .clipShape(ChatBubble(me: me))
           }
           .padding(.leading)
           .padding(.trailing, 80)
@@ -37,9 +41,9 @@ struct MessageView: View {
       }
     }
 }
-
-struct MessageView_Previews: PreviewProvider {
-    static var previews: some View {
-      MessageView(message: Message())
-    }
-}
+//
+//struct MessageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//      MessageView(message: Message())
+//    }
+//}

@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct ConversationsView: View {
+  @State var friend: Person?
   @State private var showNewMessageView = false
   @State private var showChatView = false
   var body: some View {
     ScrollView {
       VStack {
         ForEach(0 ..< 25) { item in
-          NavigationLink(destination: ChatView()) {
-            ConversationCell()
+          NavigationLink(destination: ChatView(friend: MOCK_PERSON)) {
+            ConversationCell(person: MOCK_PERSON)
           }
         }
-        NavigationLink(isActive: $showChatView) {
-          ChatView()
-        } label: {
-          EmptyView()
+        if let friend = friend {
+          NavigationLink(isActive: $showChatView) {
+            ChatView(friend: friend)
+          } label: {
+            EmptyView()
+          }
         }
 
       }
@@ -31,12 +34,13 @@ struct ConversationsView: View {
     .sheet(isPresented: $showNewMessageView, onDismiss: {
       showChatView.toggle()
     }) {
-      NewMessageView()
+      NewMessageView(friend: $friend)
     }
     .overlay(alignment: .bottomTrailing) {
       squarePencil
     }
   }
+
   var squarePencil: some View {
     Button {
       showNewMessageView.toggle()

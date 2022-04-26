@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NewMessageView: View {
+  @Binding var friend: Person?
   @Environment(\.dismiss) var dismiss
   @State private var searchText = ""
   @State private var isEditing = false
@@ -20,6 +21,7 @@ struct NewMessageView: View {
         VStack(alignment: .leading) {
           ForEach(viewModel.persons) { person in
             Button(action: {
+              friend = person
               dismiss()
             }) {
               UserCell(person: person)
@@ -32,9 +34,9 @@ struct NewMessageView: View {
       .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
-
-struct NewMessageView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewMessageView()
-    }
-}
+//
+//struct NewMessageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewMessageView()
+//    }
+//}
