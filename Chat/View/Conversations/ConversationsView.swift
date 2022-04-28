@@ -8,25 +8,25 @@
 import SwiftUI
 
 struct ConversationsView: View {
+  @ObservedObject var viewModel = ConversationsViewModel()
   @State var friend: Person?
   @State private var showNewMessageView = false
   @State private var showChatView = false
   var body: some View {
     ScrollView {
       VStack {
-        ForEach(0 ..< 3) { item in
-          NavigationLink(destination: ChatView(friend: MOCK_PERSON)) {
-            ConversationCell(person: MOCK_PERSON)
+        ForEach(viewModel.messages) { message in
+          NavigationLink(destination: ChatView(name: message.name, uid: message.uid, url: message.url)) {
+            ConversationCell(viewModel: MessageViewModel(message: message))
           }
         }
-        if let friend = friend {
+        if let friend = friend, let id = friend.id {
           NavigationLink(isActive: $showChatView) {
-            ChatView(friend: friend)
+            ChatView(name: friend.fullname, uid: id, url: friend.profileImageUrl)
           } label: {
             EmptyView()
           }
         }
-
       }
       .frame(maxWidth: .infinity, alignment: .leading)
       .padding()

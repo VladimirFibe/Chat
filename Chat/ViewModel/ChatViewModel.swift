@@ -10,15 +10,18 @@ import FirebaseFirestoreSwift
 
 class ChatViewModel: ObservableObject {
   @Published var messages = [Message]()
-  let friend: Person
-  init(friend: Person) {
-    self.friend = friend
+  let friendUid: String
+  let friendName: String
+  let friendUrl: String
+  init(name: String, uid: String, url: String) {
+    friendUid = uid
+    friendUrl = url
+    friendName = name
     fetchMessages()
   }
   
   func fetchMessages() {
     guard let currentUid = Auth.auth().currentUser?.uid else { return }
-    guard let friendUid = friend.id else { return }
     let query = COLLECTION_MESSAGES
       .document(currentUid)
       .collection(friendUid)
@@ -32,8 +35,8 @@ class ChatViewModel: ObservableObject {
   }
   
   func sendMessage(_ text: String) {
-    guard let currentUid = Auth.auth().currentUser?.uid else { return }
-    guard let friendUid = friend.id else { return }
+    let me = AuthViewModel.shared.person
+    guard let currentUid = me.id else { return }
         
     let currentRef = COLLECTION_MESSAGES
       .document(currentUid)
@@ -44,15 +47,31 @@ class ChatViewModel: ObservableObject {
       .document(friendUid)
       .collection(currentUid)
     
+    let recentCurrentRef = COLLECTION_MESSAGES
+      .document(currentUid)
+      .collection("recents")
+      .document(friendUid)
+    
+    let recentFriendRef = COLLECTION_MESSAGES
+      .document(friendUid)
+      .collection("recents")
+      .document(currentUid)
+    
     let messageId = currentRef.documentID
     let data: [String: Any] = [
       "text": text,
-      "from": currentUid,
-      "to": friendUid,
       "read": false,
-      "timestamp": Timestamp(date: Date())
+      "fromId": currentUid,
+      "fromName": me.fullname,
+      "fromUrl": me.profileImageUrl,
+      "toId": friendUid,
+      "toName": friendName,
+      "toUrl": friendUrl,
+      "timestamp": Timestamp(date: Date()),
     ]
     currentRef.setData(data)
     friendRef.document(messageId).setData(data)
+    recentCurrentRef.setData(data)
+    recentFriendRef.setData(data)
   }
 }

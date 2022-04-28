@@ -7,22 +7,6 @@
 
 import SwiftUI
 
-struct MessageViewModel {
-  let message: Message
-  let url: String
-  var currentUid: String {
-    AuthViewModel.shared.person.id ?? ""
-  }
-  
-  var me: Bool {
-    message.from == currentUid
-  }
-  
-  var text: String {
-    message.text
-  }
-}
-
 struct MessageView: View {
   let viewModel: MessageViewModel
   var body: some View {

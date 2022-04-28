@@ -57,6 +57,8 @@
 		E86D89F4280DC5E400BB9E7B /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = E86D89F3280DC5E400BB9E7B /* FirebaseFunctions */; };
 		E86D89F6280DC64400BB9E7B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */; };
 		E8CCC923280F2A810064962F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCC922280F2A810064962F /* Person.swift */; };
+		E8ED38D3281A314A00AA958C /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED38D2281A314A00AA958C /* ConversationsViewModel.swift */; };
+		E8ED38D5281A320900AA958C /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED38D4281A320900AA958C /* MessageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +107,8 @@
 		E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extensions.swift"; sourceTree = "<group>"; };
 		E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		E8CCC922280F2A810064962F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E8ED38D2281A314A00AA958C /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
+		E8ED38D4281A320900AA958C /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,8 +185,10 @@
 				E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */,
 				1FAD71C9280A5C4C0079DDCF /* UserStatusViewModel.swift */,
 				1F72B480280CF18600D7219F /* ChatViewModel.swift */,
+				E8ED38D2281A314A00AA958C /* ConversationsViewModel.swift */,
 				1FAD71C7280A40960079DDCF /* UserStatus.swift */,
 				E8376ACA280FE06A002B7153 /* NewMessageViewModel.swift */,
+				E8ED38D4281A320900AA958C /* MessageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F26CC9F27BF664A00BC0A4D /* FirebaseManager.swift in Sources */,
+				E8ED38D3281A314A00AA958C /* ConversationsViewModel.swift in Sources */,
 				E8376ACB280FE06A002B7153 /* NewMessageViewModel.swift in Sources */,
 				1FAD71C42809C7060079DDCF /* StatusSelectorView.swift in Sources */,
 				023D6EE127F3D09E0068CF91 /* EditProfileView.swift in Sources */,
@@ -449,6 +456,7 @@
 				E86D89F6280DC64400BB9E7B /* AuthViewModel.swift in Sources */,
 				1F72B47F280CF10200D7219F /* Message.swift in Sources */,
 				1FAD71D1280AA3770079DDCF /* UserCell.swift in Sources */,
+				E8ED38D5281A320900AA958C /* MessageViewModel.swift in Sources */,
 				1F6014A9280C6ED000B66F8E /* ChatBubble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,7 +586,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
@@ -594,7 +602,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.2;
+				MARKETING_VERSION = 0.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -609,7 +617,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
@@ -625,7 +633,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.2;
+				MARKETING_VERSION = 0.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
