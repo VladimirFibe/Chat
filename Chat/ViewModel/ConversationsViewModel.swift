@@ -10,7 +10,7 @@ import Firebase
 import FirebaseFirestoreSwift
 
 class ConversationsViewModel: ObservableObject {
-  @Published var messages = [Message]()
+  @Published var conversations = [Conversation]()
   init() {
     fetchMessages()
   }
@@ -23,7 +23,7 @@ class ConversationsViewModel: ObservableObject {
 
     query.addSnapshotListener { snapshot, _ in
       if let snapshot = snapshot {
-        self.messages = snapshot.documents.compactMap { try? $0.data(as: Message.self)}
+        self.conversations = snapshot.documents.compactMap { try? $0.data(as: Conversation.self)}
       }
     }
   }

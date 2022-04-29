@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ConversationCell: View {
-  let viewModel: MessageViewModel
+  let viewModel: ConversationCellViewModel
   var body: some View {
     VStack(alignment: .leading) {
       HStack {
-        AvatarView(url: viewModel.url)
+        AvatarView(url: viewModel.image)
         VStack(alignment: .leading, spacing: 4.0) {
           Text(viewModel.name)
             .font(.system(size: 14, weight: .semibold))
@@ -24,9 +24,3 @@ struct ConversationCell: View {
     }
   }
 }
-//
-//struct ConversationCell_Previews: PreviewProvider {
-//  static var previews: some View {
-//    ConversationCell(person: Person())
-//  }
-//}

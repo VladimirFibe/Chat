@@ -9,20 +9,16 @@ import SwiftUI
 
 struct MessageViewModel {
   let message: Message
-  var url: String {
-    me ? message.toUrl : message.fromUrl
+  var image: String? {
+    message.profileImageUrl
   }
   
   var name: String {
-    me ? message.toName : message.fromName
+    message.fullname
   }
   
   var currentUid: String {
     AuthViewModel.shared.person.id ?? ""
-  }
-  
-  var me: Bool {
-    message.fromId == currentUid
   }
   
   var text: String {

@@ -15,9 +15,9 @@ struct ConversationsView: View {
   var body: some View {
     ScrollView {
       VStack {
-        ForEach(viewModel.messages) { message in
-          NavigationLink(destination: ChatView(name: message.name, uid: message.uid, url: message.url)) {
-            ConversationCell(viewModel: MessageViewModel(message: message))
+        ForEach(viewModel.conversations) { conversation in
+          NavigationLink(destination: ChatView(name: conversation.fullname, uid: conversation.id ?? "", url: conversation.profileImageUrl)) {
+            ConversationCell(viewModel: ConversationCellViewModel(conversation: conversation))
           }
         }
         if let friend = friend, let id = friend.id {

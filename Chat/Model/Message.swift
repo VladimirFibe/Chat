@@ -10,29 +10,9 @@ import Firebase
 
 struct Message: Identifiable, Decodable {
   @DocumentID var id: String?
-  var text = ""
-  var fromId = ""
-  var fromName = ""
-  var fromUrl = ""
-  var toId = ""
-  var toName = ""
-  var toUrl = ""
+  var fullname: String
+  var profileImageUrl: String?
+  var text: String
   var read = false
   var timestamp: Timestamp? = nil
-  
-  var me: Bool {
-    fromId == Auth.auth().currentUser?.uid
-  }
-  
-  var name: String {
-    me ? toName : fromName
-  }
-  
-  var uid: String {
-    me ? toId : fromId
-  }
-  
-  var url: String {
-    me ? toUrl : fromUrl
-  }
 }

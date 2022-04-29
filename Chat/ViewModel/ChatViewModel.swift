@@ -58,20 +58,23 @@ class ChatViewModel: ObservableObject {
       .document(currentUid)
     
     let messageId = currentRef.documentID
-    let data: [String: Any] = [
+    
+    var data: [String: Any] = [
       "text": text,
       "read": false,
-      "fromId": currentUid,
-      "fromName": me.fullname,
-      "fromUrl": me.profileImageUrl,
-      "toId": friendUid,
-      "toName": friendName,
-      "toUrl": friendUrl,
+      "fullname": friendUid,
       "timestamp": Timestamp(date: Date()),
     ]
     currentRef.setData(data)
-    friendRef.document(messageId).setData(data)
+    
+    data["fullname"] = friendName
+    data["profileImageUrl"] = friendUrl
     recentCurrentRef.setData(data)
+    
+    data["fullname"] = me.fullname
+    data["profileImageUrl"] = me.profileImageUrl
     recentFriendRef.setData(data)
+    data["fullname"] = me.id
+    friendRef.document(messageId).setData(data)
   }
 }
