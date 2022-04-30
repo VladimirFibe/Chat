@@ -48,6 +48,7 @@
 		1FAD71D5280AA54F0079DDCF /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD71D4280AA54F0079DDCF /* ConversationCell.swift */; };
 		E8376ACB280FE06A002B7153 /* NewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8376ACA280FE06A002B7153 /* NewMessageViewModel.swift */; };
 		E8376ACD280FE263002B7153 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8376ACC280FE263002B7153 /* Constants.swift */; };
+		E83D7A67281CB2E100248BFB /* SelectedGroupMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83D7A66281CB2E100248BFB /* SelectedGroupMembersView.swift */; };
 		E8492582280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8492581280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift */; };
 		E8492585280E3FC600ABF5FF /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8492584280E3FC600ABF5FF /* ImageUploader.swift */; };
 		E8492588280E4BC600ABF5FF /* AuthOrMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8492587280E4BC600ABF5FF /* AuthOrMainView.swift */; };
@@ -56,8 +57,11 @@
 		E86D89F1280DC2F800BB9E7B /* Color + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */; };
 		E86D89F4280DC5E400BB9E7B /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = E86D89F3280DC5E400BB9E7B /* FirebaseFunctions */; };
 		E86D89F6280DC64400BB9E7B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */; };
+		E899A238281BCF0F003AB081 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899A237281BCF0F003AB081 /* ChannelCell.swift */; };
+		E899A23A281BD021003AB081 /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899A239281BD021003AB081 /* CreateGroupView.swift */; };
 		E8B0598E281B8C3C0059D7EB /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B0598D281B8C3C0059D7EB /* Conversation.swift */; };
 		E8B05990281B93A10059D7EB /* ConversationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B0598F281B93A10059D7EB /* ConversationCellViewModel.swift */; };
+		E8B05992281BB4BE0059D7EB /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B05991281BB4BE0059D7EB /* BlueButton.swift */; };
 		E8CCC923280F2A810064962F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCC922280F2A810064962F /* Person.swift */; };
 		E8ED38D3281A314A00AA958C /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED38D2281A314A00AA958C /* ConversationsViewModel.swift */; };
 		E8ED38D5281A320900AA958C /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED38D4281A320900AA958C /* MessageViewModel.swift */; };
@@ -101,6 +105,7 @@
 		1FAD71D4280AA54F0079DDCF /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		E8376ACA280FE06A002B7153 /* NewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewModel.swift; sourceTree = "<group>"; };
 		E8376ACC280FE263002B7153 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E83D7A66281CB2E100248BFB /* SelectedGroupMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGroupMembersView.swift; sourceTree = "<group>"; };
 		E8492581280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
 		E8492584280E3FC600ABF5FF /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		E8492587280E4BC600ABF5FF /* AuthOrMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthOrMainView.swift; sourceTree = "<group>"; };
@@ -108,8 +113,11 @@
 		E849258D280E573700ABF5FF /* MakeItSo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MakeItSo.png; sourceTree = "<group>"; };
 		E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extensions.swift"; sourceTree = "<group>"; };
 		E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		E899A237281BCF0F003AB081 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		E899A239281BD021003AB081 /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
 		E8B0598D281B8C3C0059D7EB /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		E8B0598F281B93A10059D7EB /* ConversationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellViewModel.swift; sourceTree = "<group>"; };
+		E8B05991281BB4BE0059D7EB /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		E8CCC922280F2A810064962F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		E8ED38D2281A314A00AA958C /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
 		E8ED38D4281A320900AA958C /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
@@ -144,6 +152,9 @@
 			isa = PBXGroup;
 			children = (
 				027AADF527F341CE00AE3A61 /* ChannelsView.swift */,
+				E899A237281BCF0F003AB081 /* ChannelCell.swift */,
+				E899A239281BD021003AB081 /* CreateGroupView.swift */,
+				E83D7A66281CB2E100248BFB /* SelectedGroupMembersView.swift */,
 			);
 			path = Channels;
 			sourceTree = "<group>";
@@ -292,6 +303,7 @@
 				1FAD71CC280A66BF0079DDCF /* ImagePicker.swift */,
 				1F18EFAA280B3BC20006AE59 /* SearchBar.swift */,
 				1FAD71D2280AA3C10079DDCF /* AvatarView.swift */,
+				E8B05991281BB4BE0059D7EB /* BlueButton.swift */,
 				1F18EFAC280B41350006AE59 /* UIApplication + Extensions.swift */,
 				E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */,
 				E8376ACC280FE263002B7153 /* Constants.swift */,
@@ -425,6 +437,7 @@
 			files = (
 				1F26CC9F27BF664A00BC0A4D /* FirebaseManager.swift in Sources */,
 				E8ED38D3281A314A00AA958C /* ConversationsViewModel.swift in Sources */,
+				E83D7A67281CB2E100248BFB /* SelectedGroupMembersView.swift in Sources */,
 				E8376ACB280FE06A002B7153 /* NewMessageViewModel.swift in Sources */,
 				1FAD71C42809C7060079DDCF /* StatusSelectorView.swift in Sources */,
 				023D6EE127F3D09E0068CF91 /* EditProfileView.swift in Sources */,
@@ -442,6 +455,8 @@
 				0297567027F2E7FB00131C61 /* AuthView.swift in Sources */,
 				E86D89F1280DC2F800BB9E7B /* Color + Extensions.swift in Sources */,
 				E8B0598E281B8C3C0059D7EB /* Conversation.swift in Sources */,
+				E899A238281BCF0F003AB081 /* ChannelCell.swift in Sources */,
+				E8B05992281BB4BE0059D7EB /* BlueButton.swift in Sources */,
 				1F6014AB280C711200B66F8E /* MessageView.swift in Sources */,
 				0297567227F2E82900131C61 /* RegistrationView.swift in Sources */,
 				1FAD71CA280A5C4C0079DDCF /* UserStatusViewModel.swift in Sources */,
@@ -463,6 +478,7 @@
 				1F18EFAD280B41360006AE59 /* UIApplication + Extensions.swift in Sources */,
 				E86D89F6280DC64400BB9E7B /* AuthViewModel.swift in Sources */,
 				1F72B47F280CF10200D7219F /* Message.swift in Sources */,
+				E899A23A281BD021003AB081 /* CreateGroupView.swift in Sources */,
 				1FAD71D1280AA3770079DDCF /* UserCell.swift in Sources */,
 				E8ED38D5281A320900AA958C /* MessageViewModel.swift in Sources */,
 				1F6014A9280C6ED000B66F8E /* ChatBubble.swift in Sources */,
@@ -594,7 +610,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
@@ -610,7 +626,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.3;
+				MARKETING_VERSION = 0.1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -625,7 +641,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
@@ -641,7 +657,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.3;
+				MARKETING_VERSION = 0.1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

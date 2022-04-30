@@ -8,13 +8,30 @@
 import SwiftUI
 
 struct ChannelsView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  @State private var showCreateGroupView = false
+  var body: some View {
+    ScrollView {
+      VStack {
+        ForEach(1..<5) { _ in
+          ChannelCell()
+        }
+      }
+      .frame(maxWidth: .infinity, alignment: .leading)
+      .padding()
     }
+    .sheet(isPresented: $showCreateGroupView, onDismiss: {
+      print("Dismiss")
+    }) {
+      CreateGroupView()
+    }
+    .overlay(alignment: .bottomTrailing) {
+      BlueButton(show: $showCreateGroupView)
+    }
+  }
 }
 
 struct ChannelsView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChannelsView()
-    }
+  static var previews: some View {
+    ChannelsView()
+  }
 }

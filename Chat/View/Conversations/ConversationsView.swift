@@ -37,24 +37,8 @@ struct ConversationsView: View {
       NewMessageView(friend: $friend)
     }
     .overlay(alignment: .bottomTrailing) {
-      squarePencil
+      BlueButton(show: $showNewMessageView)
     }
-  }
-
-  var squarePencil: some View {
-    Button {
-      showNewMessageView.toggle()
-    } label: {
-      Image(systemName: "square.and.pencil")
-        .resizable()
-        .scaledToFit()
-        .frame(width: 24, height: 24)
-        .padding()
-        .background(Color.systemBlue, in: Circle())
-        .tint(.white)
-        .padding()
-    }
-
   }
 }
 
