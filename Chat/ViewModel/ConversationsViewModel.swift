@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 class ConversationsViewModel: ObservableObject {

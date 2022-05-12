@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct CreateGroupView: View {
+  @State private var searchText = ""
   var body: some View {
     NavigationView {
       VStack {
-        SearchBar(text: .constant(""),
+        SearchBar(text: $searchText,
                   isEditing: .constant(true))
         SelectedGroupMembersView()
         List {
           ForEach(0 ..< 5) { item in
-            UserCell(person: MOCK_PERSON)
+            SelectableUserCell(person: SelectablePerson(person: MOCK_PERSON))
           }
         }
         .listStyle(.plain)
       }
       .padding()
-      .navigationTitle("Group")
+      .navigationTitle("New Group")
       .navigationBarTitleDisplayMode(.inline)
       .toolbar {
         ToolbarItem(placement: .navigationBarLeading) {cancelButton}

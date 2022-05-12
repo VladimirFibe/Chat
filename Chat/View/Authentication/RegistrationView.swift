@@ -64,7 +64,6 @@ struct RegistrationView: View {
   
   var signupButton: some View {
     Button {
-      print(email, password)
       viewModel.register(withEmail: email, password: password, fullname: fullname, username: username)
     } label: {
       Text("Sign Up")

@@ -134,7 +134,6 @@ struct LoginView: View {
         }
         if let url = url {
           loginStatus = "Successfully stored image with url: \(url.absoluteString)"
-          print(loginStatus)
           self.storeUserInfromation(imageProfileUrl: url)
         }
       }
@@ -153,7 +152,6 @@ struct LoginView: View {
         return
       }
       loginStatus = "Success"
-      print(loginStatus)
     }
   }
 }

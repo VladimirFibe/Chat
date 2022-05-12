@@ -70,7 +70,9 @@ class AuthViewModel: ObservableObject {
       let data: [String: Any] = [
         "email": email,
         "username": username,
-        "fullname": fullname
+        "fullname": fullname,
+        "latitude": 0.0,
+        "longitude": 0.0
       ]
       COLLECTION_PERSONS.document(uid).setData(data) { error in
         if let error = error {

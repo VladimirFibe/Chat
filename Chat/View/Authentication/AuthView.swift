@@ -54,7 +54,6 @@ struct AuthView: View {
   
   var signinButton: some View {
     Button {
-      print(email, password)
       AuthViewModel.shared.login(withEmail: email, password: password)
     } label: {
       Text("Sign In")

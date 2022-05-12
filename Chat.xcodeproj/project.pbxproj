@@ -63,8 +63,15 @@
 		E8B05990281B93A10059D7EB /* ConversationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B0598F281B93A10059D7EB /* ConversationCellViewModel.swift */; };
 		E8B05992281BB4BE0059D7EB /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B05991281BB4BE0059D7EB /* BlueButton.swift */; };
 		E8CCC923280F2A810064962F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCC922280F2A810064962F /* Person.swift */; };
+		E8E1A4DC28234587000A4240 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1A4DB28234587000A4240 /* MapView.swift */; };
+		E8E1A4DF28234670000A4240 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1A4DE28234670000A4240 /* LocationManager.swift */; };
+		E8E29D16281DF6F8005B09F2 /* SelectableUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E29D15281DF6F8005B09F2 /* SelectableUserCell.swift */; };
+		E8E29D18281DF7AE005B09F2 /* SelectablePerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E29D17281DF7AE005B09F2 /* SelectablePerson.swift */; };
 		E8ED38D3281A314A00AA958C /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED38D2281A314A00AA958C /* ConversationsViewModel.swift */; };
 		E8ED38D5281A320900AA958C /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED38D4281A320900AA958C /* MessageViewModel.swift */; };
+		E8F8FD2A2824B409005B8221 /* MapFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F8FD292824B409005B8221 /* MapFriends.swift */; };
+		E8F8FD2C2824B588005B8221 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F8FD2B2824B588005B8221 /* MapViewModel.swift */; };
+		E8F8FD2E2824D907005B8221 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F8FD2D2824D907005B8221 /* MapAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,8 +126,15 @@
 		E8B0598F281B93A10059D7EB /* ConversationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellViewModel.swift; sourceTree = "<group>"; };
 		E8B05991281BB4BE0059D7EB /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		E8CCC922280F2A810064962F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E8E1A4DB28234587000A4240 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E8E1A4DE28234670000A4240 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		E8E29D15281DF6F8005B09F2 /* SelectableUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableUserCell.swift; sourceTree = "<group>"; };
+		E8E29D17281DF7AE005B09F2 /* SelectablePerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectablePerson.swift; sourceTree = "<group>"; };
 		E8ED38D2281A314A00AA958C /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
 		E8ED38D4281A320900AA958C /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		E8F8FD292824B409005B8221 /* MapFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFriends.swift; sourceTree = "<group>"; };
+		E8F8FD2B2824B588005B8221 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		E8F8FD2D2824D907005B8221 /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +169,7 @@
 				E899A237281BCF0F003AB081 /* ChannelCell.swift */,
 				E899A239281BD021003AB081 /* CreateGroupView.swift */,
 				E83D7A66281CB2E100248BFB /* SelectedGroupMembersView.swift */,
+				E8E29D15281DF6F8005B09F2 /* SelectableUserCell.swift */,
 			);
 			path = Channels;
 			sourceTree = "<group>";
@@ -205,6 +220,7 @@
 				E8376ACA280FE06A002B7153 /* NewMessageViewModel.swift */,
 				E8ED38D4281A320900AA958C /* MessageViewModel.swift */,
 				E8B0598F281B93A10059D7EB /* ConversationCellViewModel.swift */,
+				E8F8FD2B2824B588005B8221 /* MapViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -212,6 +228,7 @@
 		0297566C27F2E74800131C61 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E8E1A4DA28234561000A4240 /* Map */,
 				027AADFB27F341FD00AE3A61 /* Conversations */,
 				027AADF427F341BD00AE3A61 /* Chats */,
 				027AADF327F341B700AE3A61 /* Settings */,
@@ -265,6 +282,7 @@
 		1F342FDA27BE91320049535E /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				E8E1A4DD2823464D000A4240 /* Managers */,
 				E8492586280E4B8F00ABF5FF /* App */,
 				E8492583280E3FB600ABF5FF /* API */,
 				1F72B47D280CF0F600D7219F /* Model */,
@@ -293,6 +311,8 @@
 				1F72B47E280CF10200D7219F /* Message.swift */,
 				E8B0598D281B8C3C0059D7EB /* Conversation.swift */,
 				E8CCC922280F2A810064962F /* Person.swift */,
+				E8E29D17281DF7AE005B09F2 /* SelectablePerson.swift */,
+				E8F8FD292824B409005B8221 /* MapFriends.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +369,23 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8E1A4DA28234561000A4240 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				E8E1A4DB28234587000A4240 /* MapView.swift */,
+				E8F8FD2D2824D907005B8221 /* MapAnnotationView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		E8E1A4DD2823464D000A4240 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E8E1A4DE28234670000A4240 /* LocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,6 +487,8 @@
 				E8CCC923280F2A810064962F /* Person.swift in Sources */,
 				1F18EFAB280B3BC20006AE59 /* SearchBar.swift in Sources */,
 				027AADF127F33FF700AE3A61 /* MainTabView.swift in Sources */,
+				E8E29D18281DF7AE005B09F2 /* SelectablePerson.swift in Sources */,
+				E8F8FD2A2824B409005B8221 /* MapFriends.swift in Sources */,
 				027AADFA27F341F500AE3A61 /* ChatView.swift in Sources */,
 				1F18EFA9280B16BD0006AE59 /* NewMessageView.swift in Sources */,
 				0297567027F2E7FB00131C61 /* AuthView.swift in Sources */,
@@ -457,6 +496,7 @@
 				E8B0598E281B8C3C0059D7EB /* Conversation.swift in Sources */,
 				E899A238281BCF0F003AB081 /* ChannelCell.swift in Sources */,
 				E8B05992281BB4BE0059D7EB /* BlueButton.swift in Sources */,
+				E8F8FD2E2824D907005B8221 /* MapAnnotationView.swift in Sources */,
 				1F6014AB280C711200B66F8E /* MessageView.swift in Sources */,
 				0297567227F2E82900131C61 /* RegistrationView.swift in Sources */,
 				1FAD71CA280A5C4C0079DDCF /* UserStatusViewModel.swift in Sources */,
@@ -469,10 +509,14 @@
 				1FAD71D3280AA3C10079DDCF /* AvatarView.swift in Sources */,
 				1F342FDC27BE91320049535E /* ChatApp.swift in Sources */,
 				1F26CCA227BFA3C200BC0A4D /* MainMessagesView.swift in Sources */,
+				E8E1A4DF28234670000A4240 /* LocationManager.swift in Sources */,
 				1FAD71C8280A40960079DDCF /* UserStatus.swift in Sources */,
 				1FAD71D5280AA54F0079DDCF /* ConversationCell.swift in Sources */,
+				E8E1A4DC28234587000A4240 /* MapView.swift in Sources */,
 				027AADF827F341D900AE3A61 /* SettingsView.swift in Sources */,
 				02552B7527F370270080BABB /* SettingsCell.swift in Sources */,
+				E8E29D16281DF6F8005B09F2 /* SelectableUserCell.swift in Sources */,
+				E8F8FD2C2824B588005B8221 /* MapViewModel.swift in Sources */,
 				1F72B47C280CE9A000D7219F /* ChatInputView.swift in Sources */,
 				E8492582280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift in Sources */,
 				1F18EFAD280B41360006AE59 /* UIApplication + Extensions.swift in Sources */,
@@ -610,12 +654,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = Allow;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please allow us to access your location so we can find your friends nearby";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please allow us to access your location so we can find your friends nearby";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Please allow us to access your location so we can find your friends nearby";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location so we can find your friends nearby";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -626,12 +674,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.5;
+				MARKETING_VERSION = 0.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -641,12 +689,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = Allow;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please allow us to access your location so we can find your friends nearby";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please allow us to access your location so we can find your friends nearby";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Please allow us to access your location so we can find your friends nearby";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location so we can find your friends nearby";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -657,12 +709,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.5;
+				MARKETING_VERSION = 0.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
