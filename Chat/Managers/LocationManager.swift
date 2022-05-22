@@ -52,9 +52,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
       manager.requestAlwaysAuthorization()
     }
   }
-  
-  func enableLocationServices() {
-    switch CLLocationManager.authorizationStatus() {
+  func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+    switch manager.authorizationStatus {
       
     case .notDetermined:
       manager.requestWhenInUseAuthorization()

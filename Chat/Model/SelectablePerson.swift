@@ -5,9 +5,13 @@
 //  Created by MacService on 01.05.2022.
 //
 
-import Foundation
+import SwiftUI
 
 struct SelectablePerson: Identifiable {
+//  static func == (lhs: SelectablePerson, rhs: SelectablePerson) -> Bool {
+//    lhs.id == rhs.id
+//  }
+  
   var id: String {
     person.id ?? UUID().uuidString
   }
@@ -21,5 +25,11 @@ struct SelectablePerson: Identifiable {
   }
   var profileImageUrl: String {
     person.profileImageUrl
+  }
+  var selectedImage: String {
+    isSelected ? "checkmark.circle.fill" : "circle"
+  }
+  var color: Color {
+    isSelected ? .blue : .gray
   }
 }

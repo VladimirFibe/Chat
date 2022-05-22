@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SelectableUserCell: View {
-  @State var person: SelectablePerson
+  let person: SelectablePerson
   var body: some View {
     HStack {
       AvatarView(url: person.profileImageUrl, width: 48.0)
@@ -23,19 +23,15 @@ struct SelectableUserCell: View {
     }
   }
   var checkButton: some View {
-    Button {
-      person.isSelected.toggle()
-    } label: {
-      Image(systemName: person.isSelected ? "checkmark.circle.fill" : "circle")
+    Image(systemName: person.selectedImage )
         .font(.system(size: 20))
-        .foregroundColor(person.isSelected ? .blue : .gray)
-    }
-
+        .foregroundColor(person.color)
   }
 }
 
 struct SelectableUserCell_Previews: PreviewProvider {
-    static var previews: some View {
-        SelectableUserCell(person: SelectablePerson(person: MOCK_PERSON))
-    }
+  static var previews: some View {
+    SelectableUserCell(person: SelectablePerson(person: MOCK_PERSON))
+      .padding(.horizontal)
+  }
 }

@@ -112,7 +112,6 @@ class AuthViewModel: ObservableObject {
   }
   
   func fetchPerson() {
-    print(#function)
     guard let uid = user?.uid else { return }
     COLLECTION_PERSONS.document(uid).getDocument { snapshot, error in
       guard let person = try? snapshot?.data(as: Person.self) else { return }

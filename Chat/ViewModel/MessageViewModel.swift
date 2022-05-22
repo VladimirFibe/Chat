@@ -13,8 +13,8 @@ struct MessageViewModel {
     message.profileImageUrl
   }
   
-  var name: String {
-    message.fullname
+  var uid: String {
+    message.uid
   }
   
   var currentUid: String {

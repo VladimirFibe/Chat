@@ -10,7 +10,8 @@ import Firebase
 
 struct Message: Identifiable, Decodable {
   @DocumentID var id: String?
-  var fullname: String
+  var uid: String
+  var name: String?
   var profileImageUrl: String?
   var text: String
   var read = false

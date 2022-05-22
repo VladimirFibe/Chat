@@ -9,7 +9,7 @@ import FirebaseFirestoreSwift
 
 struct Conversation: Identifiable, Decodable {
   @DocumentID var id: String?
-  var fullname: String
+  var uid: String
   var profileImageUrl: String
   var text: String
   var read = false

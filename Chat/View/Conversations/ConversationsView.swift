@@ -16,7 +16,7 @@ struct ConversationsView: View {
     ScrollView {
       VStack {
         ForEach(viewModel.conversations) { conversation in
-          NavigationLink(destination: ChatView(name: conversation.fullname, uid: conversation.id ?? "", url: conversation.profileImageUrl)) {
+          NavigationLink(destination: ChatView(name: conversation.uid, uid: conversation.id ?? "", url: conversation.profileImageUrl)) {
             ConversationCell(viewModel: ConversationCellViewModel(conversation: conversation))
           }
         }

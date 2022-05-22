@@ -10,7 +10,7 @@ import Firebase
 
 @main
 struct ChatApp: App {
-  @StateObject var locationManager = LocationManager()
+//  @StateObject var locationManager = LocationManager()
   @StateObject var authViewModel = AuthViewModel.shared
   init() {
     FirebaseApp.configure()
@@ -20,9 +20,10 @@ struct ChatApp: App {
 //      MainTabView()
 //      EditProfileView()
 //      AuthView()
+//      ChannelChatView()
       AuthOrMainView()
         .environmentObject(authViewModel)
-        .environmentObject(locationManager)
+//        .environmentObject(locationManager)
     }
   }
 }

@@ -15,7 +15,7 @@ struct ConversationCellViewModel {
   }
   
   var name: String {
-    conversation.fullname
+    conversation.uid
   }
   
   var text: String {

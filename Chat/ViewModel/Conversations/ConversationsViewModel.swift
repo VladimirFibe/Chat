@@ -24,7 +24,8 @@ class ConversationsViewModel: ObservableObject {
 
     query.addSnapshotListener { snapshot, _ in
       if let snapshot = snapshot {
-        self.conversations = snapshot.documents.compactMap { try? $0.data(as: Conversation.self)}
+        self.conversations = snapshot.documents.compactMap {
+          return try? $0.data(as: Conversation.self)}
       }
     }
   }

@@ -25,12 +25,9 @@ struct MapView: View {
     }
         .ignoresSafeArea(.all, edges: .top)
         .navigationBarHidden(true)
-        .onAppear {
-          locationManager.enableLocationServices()
-        }
         .overlay(
           Button(action: {
-            
+
           }, label: {
             Text("Начать прогулку")
           })

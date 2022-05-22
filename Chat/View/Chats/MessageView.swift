@@ -12,16 +12,24 @@ struct MessageView: View {
   var body: some View {
     HStack {
       if let image = viewModel.image {
-        HStack(alignment: .bottom, spacing: 10) {
-          AvatarView(url: image, width: 32)
-          Text(viewModel.text)
-            .padding(12)
-            .background(Color.systemGray5)
-            .font(.system(size: 15))
-            .clipShape(ChatBubble(me: false))
+        VStack {
+          if let name = viewModel.message.name {
+            Text(name)
+              .foregroundColor(.gray)
+              .font(.system(size: 14))
+              .padding(.leading, 44)
+          }
+          HStack(alignment: .bottom, spacing: 10) {
+            AvatarView(url: image, width: 32)
+            Text(viewModel.text)
+              .padding(12)
+              .background(Color.systemGray5)
+              .font(.system(size: 15))
+              .clipShape(ChatBubble(me: false))
+          }
+          .padding(.leading)
+          .padding(.trailing, 80)
         }
-        .padding(.leading)
-        .padding(.trailing, 80)
         Spacer()
       } else {
         Spacer()

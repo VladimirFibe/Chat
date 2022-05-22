@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct MainTabView: View {
-  @State var selection = Tabs.Map
+  @State var selection = Tabs.Channels
   var body: some View {
     NavigationView {
       TabView(selection: $selection) {
-        MapView().tabItem { Label("Map", systemImage: "map") }.tag(Tabs.Map)
+//        MapView().tabItem { Label("Map", systemImage: "map") }.tag(Tabs.Map)
         ConversationsView().tabItem { Label("Chats", systemImage: "bubble.left") }.tag(Tabs.Chats)
         ChannelsView().tabItem { Label("Channels", systemImage: "bubble.left.and.bubble.right")  }.tag(Tabs.Channels)
         SettingsView().tabItem { Label("Settings", systemImage: "gear")  }.tag(Tabs.Settings)
@@ -29,7 +29,7 @@ struct MainTabView_Previews: PreviewProvider {
 }
 
 enum Tabs: String {
-  case Map
+//  case Map
   case Chats
   case Channels
   case Settings
