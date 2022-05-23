@@ -68,12 +68,14 @@
 		E8CFDF7D2837B2FB00588BBE /* CreateChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CFDF7C2837B2FB00588BBE /* CreateChannelViewModel.swift */; };
 		E8CFDF7F2837DD3D00588BBE /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CFDF7E2837DD3D00588BBE /* Channel.swift */; };
 		E8CFDF812837DEC600588BBE /* ChannelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CFDF802837DEC600588BBE /* ChannelsViewModel.swift */; };
+		E8D965A1283B829A0009B121 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D965A0283B829A0009B121 /* EditProfileViewModel.swift */; };
 		E8E1A4DC28234587000A4240 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1A4DB28234587000A4240 /* MapView.swift */; };
 		E8E1A4DF28234670000A4240 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1A4DE28234670000A4240 /* LocationManager.swift */; };
 		E8E29D16281DF6F8005B09F2 /* SelectableUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E29D15281DF6F8005B09F2 /* SelectableUserCell.swift */; };
 		E8E29D18281DF7AE005B09F2 /* SelectablePerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E29D17281DF7AE005B09F2 /* SelectablePerson.swift */; };
 		E8E7EDDD2839581000FD0C80 /* ChannelChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E7EDDC2839581000FD0C80 /* ChannelChatView.swift */; };
 		E8E7EDDF2839583800FD0C80 /* ChannelChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E7EDDE2839583800FD0C80 /* ChannelChatViewModel.swift */; };
+		E8E84BFB283A47F500B2F6A1 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E84BFA283A47F500B2F6A1 /* SwiftUIView.swift */; };
 		E8ED38D3281A314A00AA958C /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED38D2281A314A00AA958C /* ConversationsViewModel.swift */; };
 		E8ED38D5281A320900AA958C /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED38D4281A320900AA958C /* MessageViewModel.swift */; };
 		E8F08B9F2836049D00FBEABD /* SelectGroupMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F08B9E2836049D00FBEABD /* SelectGroupMembersViewModel.swift */; };
@@ -139,12 +141,14 @@
 		E8CFDF7C2837B2FB00588BBE /* CreateChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelViewModel.swift; sourceTree = "<group>"; };
 		E8CFDF7E2837DD3D00588BBE /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		E8CFDF802837DEC600588BBE /* ChannelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewModel.swift; sourceTree = "<group>"; };
+		E8D965A0283B829A0009B121 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		E8E1A4DB28234587000A4240 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E8E1A4DE28234670000A4240 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		E8E29D15281DF6F8005B09F2 /* SelectableUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableUserCell.swift; sourceTree = "<group>"; };
 		E8E29D17281DF7AE005B09F2 /* SelectablePerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectablePerson.swift; sourceTree = "<group>"; };
 		E8E7EDDC2839581000FD0C80 /* ChannelChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelChatView.swift; sourceTree = "<group>"; };
 		E8E7EDDE2839583800FD0C80 /* ChannelChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelChatViewModel.swift; sourceTree = "<group>"; };
+		E8E84BFA283A47F500B2F6A1 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		E8ED38D2281A314A00AA958C /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
 		E8ED38D4281A320900AA958C /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		E8F08B9E2836049D00FBEABD /* SelectGroupMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGroupMembersViewModel.swift; sourceTree = "<group>"; };
@@ -233,13 +237,10 @@
 				E8F08B9D2836046000FBEABD /* Channels */,
 				E8E84BF9283A0DCF00B2F6A1 /* Conversations */,
 				E8E84BF8283A0A2A00B2F6A1 /* Chat */,
-				02552B7627F376850080BABB /* SettingsCellViewModel.swift */,
-				E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */,
-				1FAD71C9280A5C4C0079DDCF /* UserStatusViewModel.swift */,
-				1FAD71C7280A40960079DDCF /* UserStatus.swift */,
-				E8376ACA280FE06A002B7153 /* NewMessageViewModel.swift */,
-				E8ED38D4281A320900AA958C /* MessageViewModel.swift */,
-				E8F8FD2B2824B588005B8221 /* MapViewModel.swift */,
+				E8D9659C283B7BD50009B121 /* Settings */,
+				E8D9659D283B7BE50009B121 /* Auth */,
+				E8D9659E283B7C110009B121 /* Messages */,
+				E8D9659F283B7C210009B121 /* Map */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -391,11 +392,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E8D9659C283B7BD50009B121 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD71C9280A5C4C0079DDCF /* UserStatusViewModel.swift */,
+				1FAD71C7280A40960079DDCF /* UserStatus.swift */,
+				02552B7627F376850080BABB /* SettingsCellViewModel.swift */,
+				E8D965A0283B829A0009B121 /* EditProfileViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E8D9659D283B7BE50009B121 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E8D9659E283B7C110009B121 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				E8ED38D4281A320900AA958C /* MessageViewModel.swift */,
+				E8376ACA280FE06A002B7153 /* NewMessageViewModel.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		E8D9659F283B7C210009B121 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				E8F8FD2B2824B588005B8221 /* MapViewModel.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		E8E1A4DA28234561000A4240 /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				E8E1A4DB28234587000A4240 /* MapView.swift */,
 				E8F8FD2D2824D907005B8221 /* MapAnnotationView.swift */,
+				E8E84BFA283A47F500B2F6A1 /* SwiftUIView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -544,11 +582,13 @@
 				1F18EFA9280B16BD0006AE59 /* NewMessageView.swift in Sources */,
 				0297567027F2E7FB00131C61 /* AuthView.swift in Sources */,
 				E86D89F1280DC2F800BB9E7B /* Color + Extensions.swift in Sources */,
+				E8D965A1283B829A0009B121 /* EditProfileViewModel.swift in Sources */,
 				E8B0598E281B8C3C0059D7EB /* Conversation.swift in Sources */,
 				E8CFDF7D2837B2FB00588BBE /* CreateChannelViewModel.swift in Sources */,
 				E899A238281BCF0F003AB081 /* ChannelCell.swift in Sources */,
 				E8B05992281BB4BE0059D7EB /* BlueButton.swift in Sources */,
 				E876803228376E78003072FD /* TelegramView.swift in Sources */,
+				E8E84BFB283A47F500B2F6A1 /* SwiftUIView.swift in Sources */,
 				E8F8FD2E2824D907005B8221 /* MapAnnotationView.swift in Sources */,
 				1F6014AB280C711200B66F8E /* MessageView.swift in Sources */,
 				0297567227F2E82900131C61 /* RegistrationView.swift in Sources */,
@@ -710,7 +750,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
@@ -730,7 +770,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.7;
+				MARKETING_VERSION = 0.1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -745,7 +785,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
@@ -765,7 +805,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.7;
+				MARKETING_VERSION = 0.1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

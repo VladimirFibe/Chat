@@ -7,6 +7,6 @@
 
 import Foundation
 
-class UserStatusViewModel: ObservableObject {
-  @Published var status = UserStatus.notConfigured
-}
+//class UserStatusViewModel: ObservableObject {
+//  @Published var status = UserStatus.notConfigured
+//}

@@ -71,6 +71,7 @@ class AuthViewModel: ObservableObject {
         "email": email,
         "username": username,
         "fullname": fullname,
+        "status": UserStatus.notConfigured.rawValue,
         "latitude": 0.0,
         "longitude": 0.0
       ]
@@ -92,6 +93,7 @@ class AuthViewModel: ObservableObject {
   
   func uploadProfileImage(_ image: UIImage) {
     guard let uid = Auth.auth().currentUser?.uid else { return }
+    
     ImageUploader.uploadImage(image) { url in
       COLLECTION_PERSONS.document(uid).updateData(["profileImageUrl": url]) { _ in
         DispatchQueue.main.async {
@@ -116,6 +118,41 @@ class AuthViewModel: ObservableObject {
     COLLECTION_PERSONS.document(uid).getDocument { snapshot, error in
       guard let person = try? snapshot?.data(as: Person.self) else { return }
       self.person = person
+    }
+  }
+  
+  func updateProfileImage(_ image: UIImage) {
+    guard let uid = person.id else { return }
+    let storagePath = Storage.storage().reference(forURL: person.profileImageUrl)
+    
+    storagePath.delete { error in
+      if let error = error {
+        print(error.localizedDescription)
+        return
+      }
+      ImageUploader.uploadImage(image) { imageUrl in
+        COLLECTION_PERSONS.document(uid).updateData(["profileImageUrl": imageUrl]) { _ in
+          self.person.profileImageUrl = imageUrl
+        }
+      }
+    }
+  }
+  
+  func updateName(_ name: String) {
+    guard let uid = person.id else { return }
+    COLLECTION_PERSONS.document(uid).updateData(["fullname": name]) { _ in
+      self.person.fullname = name
+    }
+  }
+  
+  func updateStatus(_ status: UserStatus) {
+    guard let uid = person.id else { return }
+    let data = ["status": status.rawValue]
+    COLLECTION_PERSONS.document(uid).updateData(data) { error in
+      if let error = error {
+        print(error.localizedDescription)
+      }
+      self.person.status = status
     }
   }
 }

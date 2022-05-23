@@ -8,15 +8,23 @@
 import SwiftUI
 
 struct EditProfileView: View {
-  @State private var fullname = "Eddie Brock"
+  @State private var fullname = AuthViewModel.shared.person.fullname
   @State private var showImagePicker = false
   @State private var image: UIImage?
   @State private var avatar = Image("profile")
   @EnvironmentObject var viewModel: AuthViewModel
+  @Environment(\.dismiss) var dismiss
   var body: some View {
     VStack(spacing: 20.0) {
       header
       status
+      Button {
+        viewModel.updateName(fullname)
+        dismiss()
+      } label: {
+        Text("Save")
+      }
+      .buttonStyle(.borderedProminent)
       Spacer()
     }
     .padding(.vertical)
@@ -24,6 +32,7 @@ struct EditProfileView: View {
     .background(Color.systemGroupedBackground)
     .navigationTitle("Edit Profile")
     .navigationBarTitleDisplayMode(.inline)
+    .navigationBarBackButtonHidden(true)
     .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
       ImagePicker(image: $image).edgesIgnoringSafeArea(.bottom)
     }
@@ -58,7 +67,7 @@ struct EditProfileView: View {
         .foregroundColor(.gray)
       NavigationLink(destination: StatusSelectorView()) {
         HStack {
-          Text("At the movies")
+          Text(viewModel.person.status.title)
           Spacer()
           Image(systemName: "chevron.right")
             .foregroundColor(.gray)
@@ -70,7 +79,7 @@ struct EditProfileView: View {
   }
   func loadImage() {
     if let image = image {
-      AuthViewModel.shared.uploadProfileImage(image)
+      viewModel.updateProfileImage(image)
       avatar = Image(uiImage: image)
     }
   }

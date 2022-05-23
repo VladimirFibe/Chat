@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsHeaderView: View {
   let person: Person
+  
   var body: some View {
     HStack {
       AvatarView(url: person.profileImageUrl)
@@ -17,7 +18,7 @@ struct SettingsHeaderView: View {
         Text(person.fullname)
           .font(.system(size: 18))
           .foregroundColor(.black)
-        Text("Available")
+        Text(person.status.title)
           .font(.system(size: 14))
           .foregroundColor(.gray)
       }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum UserStatus: Identifiable, CaseIterable {
+enum UserStatus: Int, CaseIterable, Codable, Identifiable {
   case notConfigured
   case available
   case busy
@@ -20,10 +20,9 @@ enum UserStatus: Identifiable, CaseIterable {
   case sleeping
   case urgentCallsOnly
   
-  var id: UserStatus {
-    self
+  var id: Int {
+    self.rawValue
   }
-  
   var title: String {
     switch self {
     case .notConfigured: return "Click here to update your status"

@@ -8,25 +8,24 @@
 import SwiftUI
 
 struct StatusSelectorView: View {
-  @ObservedObject var viewModel = UserStatusViewModel()
+  @EnvironmentObject var viewModel: AuthViewModel
   var body: some View {
     ScrollView {
       VStack(alignment: .leading, spacing: 20.0) {
         Text("CURRENTLY SET TO")
           .foregroundColor(.gray)
           .padding()
-        StatusCell(item: viewModel.status)
+        StatusCell(status: viewModel.person.status)
         Text("SELECT YOUR STATUS")
           .foregroundColor(.gray)
           .padding()
         VStack(alignment: .leading, spacing: 0) {
-          ForEach(UserStatus.allCases.filter{$0 != .notConfigured}) { item in
+          ForEach(UserStatus.allCases.filter{$0 != .notConfigured}) { status in
             Button(action: {
-              viewModel.status = item
+              viewModel.updateStatus(status)
             }) {
-              StatusCell(item: item)
+              StatusCell(status: status)
             }
-//            .accentColor(.black)
           }
         }
       }
@@ -41,13 +40,14 @@ struct StatusSelectorView: View {
 struct StatusSelectorView_Previews: PreviewProvider {
   static var previews: some View {
     StatusSelectorView()
+      .environmentObject(AuthViewModel.shared)
   }
 }
 
 struct StatusCell: View {
-  let item: UserStatus
+  let status: UserStatus
   var body: some View {
-    Text(item.title)
+    Text(status.title)
       .frame(height: 56)
       .frame(maxWidth: .infinity, alignment: .leading)
       .padding(.horizontal)
