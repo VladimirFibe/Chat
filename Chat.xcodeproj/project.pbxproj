@@ -28,7 +28,6 @@
 		1F342FDE27BE91320049535E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F342FDD27BE91320049535E /* LoginView.swift */; };
 		1F342FE027BE91330049535E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F342FDF27BE91330049535E /* Assets.xcassets */; };
 		1F342FE327BE91330049535E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F342FE227BE91330049535E /* Preview Assets.xcassets */; };
-		1F342FEA27BEC1ED0049535E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F342FE927BEC1ED0049535E /* GoogleService-Info.plist */; };
 		1F342FED27BEC2A50049535E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1F342FEC27BEC2A50049535E /* FirebaseAuth */; };
 		1F342FEF27BEC2A50049535E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1F342FEE27BEC2A50049535E /* FirebaseFirestore */; };
 		1F342FF127BEC2A50049535E /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 1F342FF027BEC2A50049535E /* FirebaseFirestoreSwift-Beta */; };
@@ -68,6 +67,9 @@
 		E8CFDF7D2837B2FB00588BBE /* CreateChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CFDF7C2837B2FB00588BBE /* CreateChannelViewModel.swift */; };
 		E8CFDF7F2837DD3D00588BBE /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CFDF7E2837DD3D00588BBE /* Channel.swift */; };
 		E8CFDF812837DEC600588BBE /* ChannelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CFDF802837DEC600588BBE /* ChannelsViewModel.swift */; };
+		E8D865BB283C60E3001EB340 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = E8D865BA283C60E3001EB340 /* FirebaseMessaging */; };
+		E8D865BE283CA93B001EB340 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E8D865BD283CA93B001EB340 /* FirebaseAnalytics */; };
+		E8D865C0283CB51D001EB340 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8D865BF283CB51D001EB340 /* GoogleService-Info.plist */; };
 		E8D965A1283B829A0009B121 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D965A0283B829A0009B121 /* EditProfileViewModel.swift */; };
 		E8E1A4DC28234587000A4240 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1A4DB28234587000A4240 /* MapView.swift */; };
 		E8E1A4DF28234670000A4240 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1A4DE28234670000A4240 /* LocationManager.swift */; };
@@ -107,7 +109,6 @@
 		1F342FDD27BE91320049535E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1F342FDF27BE91330049535E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F342FE227BE91330049535E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1F342FE927BEC1ED0049535E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1F6014A8280C6ED000B66F8E /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		1F6014AA280C711200B66F8E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		1F72B47B280CE9A000D7219F /* ChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputView.swift; sourceTree = "<group>"; };
@@ -141,6 +142,9 @@
 		E8CFDF7C2837B2FB00588BBE /* CreateChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelViewModel.swift; sourceTree = "<group>"; };
 		E8CFDF7E2837DD3D00588BBE /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		E8CFDF802837DEC600588BBE /* ChannelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewModel.swift; sourceTree = "<group>"; };
+		E8D865B9283C59D1001EB340 /* Chat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chat.entitlements; sourceTree = "<group>"; };
+		E8D865BC283C7136001EB340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E8D865BF283CB51D001EB340 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8D965A0283B829A0009B121 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		E8E1A4DB28234587000A4240 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E8E1A4DE28234670000A4240 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 			files = (
 				1F342FF527BEC2A50049535E /* FirebaseStorageSwift-Beta in Frameworks */,
 				1F342FF127BEC2A50049535E /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				E8D865BE283CA93B001EB340 /* FirebaseAnalytics in Frameworks */,
+				E8D865BB283C60E3001EB340 /* FirebaseMessaging in Frameworks */,
 				1F342FF327BEC2A50049535E /* FirebaseStorage in Frameworks */,
 				E86D89F4280DC5E400BB9E7B /* FirebaseFunctions in Frameworks */,
 				1F342FED27BEC2A50049535E /* FirebaseAuth in Frameworks */,
@@ -302,6 +308,8 @@
 		1F342FDA27BE91320049535E /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				E8D865BC283C7136001EB340 /* Info.plist */,
+				E8D865B9283C59D1001EB340 /* Chat.entitlements */,
 				E8E1A4DD2823464D000A4240 /* Managers */,
 				E8492586280E4B8F00ABF5FF /* App */,
 				E8492583280E3FB600ABF5FF /* API */,
@@ -311,7 +319,7 @@
 				1FAD71CB280A66AA0079DDCF /* Utilities */,
 				1F26CCA027BFA3A800BC0A4D /* Messages */,
 				1F342FDF27BE91330049535E /* Assets.xcassets */,
-				1F342FE927BEC1ED0049535E /* GoogleService-Info.plist */,
+				E8D865BF283CB51D001EB340 /* GoogleService-Info.plist */,
 				1F342FE127BE91330049535E /* Preview Content */,
 			);
 			path = Chat;
@@ -497,6 +505,8 @@
 				1F342FF227BEC2A50049535E /* FirebaseStorage */,
 				1F342FF427BEC2A50049535E /* FirebaseStorageSwift-Beta */,
 				E86D89F3280DC5E400BB9E7B /* FirebaseFunctions */,
+				E8D865BA283C60E3001EB340 /* FirebaseMessaging */,
+				E8D865BD283CA93B001EB340 /* FirebaseAnalytics */,
 			);
 			productName = Chat;
 			productReference = 1F342FD827BE91320049535E /* Chat.app */;
@@ -545,9 +555,9 @@
 			files = (
 				1F342FE327BE91330049535E /* Preview Assets.xcassets in Resources */,
 				1F342FE027BE91330049535E /* Assets.xcassets in Resources */,
+				E8D865C0283CB51D001EB340 /* GoogleService-Info.plist in Resources */,
 				E849258E280E573700ABF5FF /* MakeItSo.png in Resources */,
 				E849258A280E56A400ABF5FF /* README.md in Resources */,
-				1F342FEA27BEC1ED0049535E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,12 +759,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Chat/Chat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chat/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = Allow;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please allow us to access your location so we can find your friends nearby";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please allow us to access your location so we can find your friends nearby";
@@ -766,6 +778,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -784,12 +797,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Chat/Chat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chat/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = Allow;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please allow us to access your location so we can find your friends nearby";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please allow us to access your location so we can find your friends nearby";
@@ -801,6 +816,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -878,6 +894,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1F342FEB27BEC2A50049535E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFunctions;
+		};
+		E8D865BA283C60E3001EB340 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F342FEB27BEC2A50049535E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		E8D865BD283CA93B001EB340 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F342FEB27BEC2A50049535E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
