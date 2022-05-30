@@ -17,6 +17,8 @@ class AuthViewModel: ObservableObject {
   @Published var addPhoto = true
   @Published var isAnonymous = true
   @Published var person = Person()
+  @Published var showError = false
+  var errorText = ""
   var canlogin: Bool {
     !isAnonymous && addPhoto
   }
@@ -54,7 +56,8 @@ class AuthViewModel: ObservableObject {
   func login(withEmail email: String, password: String) {
     Auth.auth().signIn(withEmail: email, password: password) { result, error in
       if let error = error {
-        print("DEBUG: \(error.localizedDescription)")
+        self.showError = true
+        self.errorText = error.localizedDescription
       }
     }
   }

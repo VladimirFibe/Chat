@@ -10,6 +10,7 @@ import SwiftUI
 struct AuthView: View {
   @State private var email = ""
   @State private var password = ""
+  @EnvironmentObject var viewModel: AuthViewModel
   var body: some View {
     NavigationView {
       VStack(alignment: .leading, spacing: 30.0) {
@@ -24,6 +25,9 @@ struct AuthView: View {
         Spacer()
         
         registerView
+      }
+      .alert(isPresented: $viewModel.showError) {
+        Alert(title: Text(viewModel.errorText), dismissButton: .default(Text("Ок")))
       }
       .frame(maxWidth: .infinity, alignment: .topLeading)
       .padding()

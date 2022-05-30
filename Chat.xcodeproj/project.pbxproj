@@ -53,6 +53,7 @@
 		E8492588280E4BC600ABF5FF /* AuthOrMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8492587280E4BC600ABF5FF /* AuthOrMainView.swift */; };
 		E849258A280E56A400ABF5FF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E8492589280E56A400ABF5FF /* README.md */; };
 		E849258E280E573700ABF5FF /* MakeItSo.png in Resources */ = {isa = PBXBuildFile; fileRef = E849258D280E573700ABF5FF /* MakeItSo.png */; };
+		E862B15828447E5E006CDFC5 /* DCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E862B15728447E5E006CDFC5 /* DCView.swift */; };
 		E86D89F1280DC2F800BB9E7B /* Color + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */; };
 		E86D89F4280DC5E400BB9E7B /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = E86D89F3280DC5E400BB9E7B /* FirebaseFunctions */; };
 		E86D89F6280DC64400BB9E7B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */; };
@@ -129,6 +130,7 @@
 		E8492587280E4BC600ABF5FF /* AuthOrMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthOrMainView.swift; sourceTree = "<group>"; };
 		E8492589280E56A400ABF5FF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E849258D280E573700ABF5FF /* MakeItSo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MakeItSo.png; sourceTree = "<group>"; };
+		E862B15728447E5E006CDFC5 /* DCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCView.swift; sourceTree = "<group>"; };
 		E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extensions.swift"; sourceTree = "<group>"; };
 		E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		E876803128376E78003072FD /* TelegramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramView.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				0297566B27F2E74600131C61 /* ViewModel */,
 				1FAD71CB280A66AA0079DDCF /* Utilities */,
 				1F26CCA027BFA3A800BC0A4D /* Messages */,
+				E862B15628447E3D006CDFC5 /* DesignCode */,
 				1F342FDF27BE91330049535E /* Assets.xcassets */,
 				E8D865BF283CB51D001EB340 /* GoogleService-Info.plist */,
 				1F342FE127BE91330049535E /* Preview Content */,
@@ -391,6 +394,14 @@
 				E849258D280E573700ABF5FF /* MakeItSo.png */,
 			);
 			path = logo;
+			sourceTree = "<group>";
+		};
+		E862B15628447E3D006CDFC5 /* DesignCode */ = {
+			isa = PBXGroup;
+			children = (
+				E862B15728447E5E006CDFC5 /* DCView.swift */,
+			);
+			path = DesignCode;
 			sourceTree = "<group>";
 		};
 		E86D89F2280DC5E400BB9E7B /* Frameworks */ = {
@@ -623,6 +634,7 @@
 				E8E29D16281DF6F8005B09F2 /* SelectableUserCell.swift in Sources */,
 				E8F8FD2C2824B588005B8221 /* MapViewModel.swift in Sources */,
 				E8E7EDDF2839583800FD0C80 /* ChannelChatViewModel.swift in Sources */,
+				E862B15828447E5E006CDFC5 /* DCView.swift in Sources */,
 				1F72B47C280CE9A000D7219F /* ChatInputView.swift in Sources */,
 				E8492582280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift in Sources */,
 				1F18EFAD280B41360006AE59 /* UIApplication + Extensions.swift in Sources */,
@@ -761,7 +773,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Chat/Chat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
@@ -778,12 +790,12 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.8;
+				MARKETING_VERSION = 0.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -799,7 +811,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Chat/Chat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Chat/Preview Content\"";
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
@@ -816,12 +828,12 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.8;
+				MARKETING_VERSION = 0.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
