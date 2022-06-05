@@ -12,7 +12,7 @@ struct MessageView: View {
   var body: some View {
     HStack {
       if let image = viewModel.image {
-        VStack {
+        VStack(alignment: .leading) {
           if let name = viewModel.message.name {
             Text(name)
               .foregroundColor(.gray)
@@ -25,7 +25,7 @@ struct MessageView: View {
               .padding(12)
               .background(Color.systemGray5)
               .font(.system(size: 15))
-              .clipShape(ChatBubble(me: false))
+              .cornerRadius(16, corners: [.topLeft, .topRight, .bottomRight])
           }
           .padding(.leading)
           .padding(.trailing, 80)
@@ -38,7 +38,7 @@ struct MessageView: View {
           .background(Color.systemBlue)
           .foregroundColor(.white)
           .font(.system(size: 15))
-          .clipShape(ChatBubble(me: true))
+          .cornerRadius(16, corners: [.topLeft, .topRight, .bottomLeft])
           .padding(.trailing)
           .padding(.leading, 100)
       }
