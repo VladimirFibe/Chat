@@ -46,6 +46,7 @@
 		1FAD71D3280AA3C10079DDCF /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD71D2280AA3C10079DDCF /* AvatarView.swift */; };
 		1FAD71D5280AA54F0079DDCF /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD71D4280AA54F0079DDCF /* ConversationCell.swift */; };
 		E80AA45A284C297300479658 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80AA459284C297300479658 /* CustomFont.swift */; };
+		E80AA45C284C333300479658 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80AA45B284C333300479658 /* SignInView.swift */; };
 		E8376ACB280FE06A002B7153 /* NewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8376ACA280FE06A002B7153 /* NewMessageViewModel.swift */; };
 		E8376ACD280FE263002B7153 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8376ACC280FE263002B7153 /* Constants.swift */; };
 		E83D7A67281CB2E100248BFB /* SelectedGroupMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83D7A66281CB2E100248BFB /* SelectedGroupMembersView.swift */; };
@@ -68,6 +69,7 @@
 		E86D89F1280DC2F800BB9E7B /* Color + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */; };
 		E86D89F4280DC5E400BB9E7B /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = E86D89F3280DC5E400BB9E7B /* FirebaseFunctions */; };
 		E86D89F6280DC64400BB9E7B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */; };
+		E8744BA8284CCC0F003191BA /* CustomTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8744BA7284CCC0E003191BA /* CustomTextFieldModifier.swift */; };
 		E87552F9284BC12500D6E7DA /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E87552F7284BC12500D6E7DA /* Inter-SemiBold.ttf */; };
 		E87552FA284BC12500D6E7DA /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E87552F8284BC12500D6E7DA /* Inter-Regular.ttf */; };
 		E87552FC284BC15200D6E7DA /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E87552FB284BC15200D6E7DA /* Poppins-Bold.ttf */; };
@@ -138,6 +140,7 @@
 		1FAD71D2280AA3C10079DDCF /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		1FAD71D4280AA54F0079DDCF /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		E80AA459284C297300479658 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		E80AA45B284C333300479658 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		E8376ACA280FE06A002B7153 /* NewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewModel.swift; sourceTree = "<group>"; };
 		E8376ACC280FE263002B7153 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E83D7A66281CB2E100248BFB /* SelectedGroupMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGroupMembersView.swift; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 		E862B15928448FE3006CDFC5 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		E86D89F0280DC2F800BB9E7B /* Color + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extensions.swift"; sourceTree = "<group>"; };
 		E86D89F5280DC64400BB9E7B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		E8744BA7284CCC0E003191BA /* CustomTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldModifier.swift; sourceTree = "<group>"; };
 		E87552F7284BC12500D6E7DA /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		E87552F8284BC12500D6E7DA /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		E87552FB284BC15200D6E7DA /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 				027AADED27F32C8500AE3A61 /* CustomTextField.swift */,
 				0297567127F2E82900131C61 /* RegistrationView.swift */,
 				E8492581280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift */,
+				E80AA45B284C333300479658 /* SignInView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -450,6 +455,7 @@
 				E862B15928448FE3006CDFC5 /* Styles.swift */,
 				E861E09D28473AD000362751 /* OnboardingView.swift */,
 				E80AA459284C297300479658 /* CustomFont.swift */,
+				E8744BA7284CCC0E003191BA /* CustomTextFieldModifier.swift */,
 			);
 			path = DesignCode;
 			sourceTree = "<group>";
@@ -694,6 +700,7 @@
 				E8492588280E4BC600ABF5FF /* AuthOrMainView.swift in Sources */,
 				027AADFD27F3421400AE3A61 /* ConversationsView.swift in Sources */,
 				027AADEE27F32C8600AE3A61 /* CustomTextField.swift in Sources */,
+				E8744BA8284CCC0F003191BA /* CustomTextFieldModifier.swift in Sources */,
 				1F342FDE27BE91320049535E /* LoginView.swift in Sources */,
 				1FAD71D3280AA3C10079DDCF /* AvatarView.swift in Sources */,
 				1F342FDC27BE91320049535E /* ChatApp.swift in Sources */,
@@ -715,6 +722,7 @@
 				E8492582280E2F3A00ABF5FF /* ProfilePhotoSelectorView.swift in Sources */,
 				1F18EFAD280B41360006AE59 /* UIApplication + Extensions.swift in Sources */,
 				E86D89F6280DC64400BB9E7B /* AuthViewModel.swift in Sources */,
+				E80AA45C284C333300479658 /* SignInView.swift in Sources */,
 				1F72B47F280CF10200D7219F /* Message.swift in Sources */,
 				E899A23A281BD021003AB081 /* CreateGroupView.swift in Sources */,
 				1FAD71D1280AA3770079DDCF /* UserCell.swift in Sources */,
