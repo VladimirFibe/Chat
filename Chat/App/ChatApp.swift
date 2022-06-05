@@ -28,6 +28,11 @@ class AppDelegate: NSObject, UIApplicationDelegate { // UIResponder
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
     Messaging.messaging().delegate = self
+    for family in UIFont.familyNames.sorted() {
+      let names = UIFont.fontNames(forFamilyName: family)
+      print(family, names)
+    }
+
     if #available(iOS 10.0, *) {
       // For iOS 10 display notification (sent via APNS)
       UNUserNotificationCenter.current().delegate = self
