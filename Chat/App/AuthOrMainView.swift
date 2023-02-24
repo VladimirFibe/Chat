@@ -1,10 +1,3 @@
-//
-//  AuthOrMainView.swift
-//  Chat
-//
-//  Created by MacService on 19.04.2022.
-//
-
 import SwiftUI
 
 struct AuthOrMainView: View {
