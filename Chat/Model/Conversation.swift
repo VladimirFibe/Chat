@@ -1,9 +1,3 @@
-//
-//  Conversation.swift
-//  Chat
-//
-//  Created by MacService on 29.04.2022.
-//
 import Firebase
 import FirebaseFirestoreSwift
 

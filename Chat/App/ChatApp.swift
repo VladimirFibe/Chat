@@ -1,10 +1,3 @@
-//
-//  ChatApp.swift
-//  Chat
-//
-//  Created by Vladimir Fibe on 17.02.2022.
-//
-
 import SwiftUI
 import Firebase
 import UserNotifications

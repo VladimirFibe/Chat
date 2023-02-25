@@ -1,10 +1,3 @@
-//
-//  LocationManager.swift
-//  Chat
-//
-//  Created by MacService on 05.05.2022.
-//
-
 import Foundation
 import CoreLocation
 import MapKit

@@ -1,10 +1,3 @@
-//
-//  Message.swift
-//  Chat
-//
-//  Created by Vladimir Fibe on 18.04.2022.
-//
-
 import FirebaseFirestoreSwift
 import Firebase
 

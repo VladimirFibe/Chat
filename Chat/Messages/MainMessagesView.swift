@@ -1,10 +1,3 @@
-//
-//  MainMessagesView.swift
-//  Chat
-//
-//  Created by Vladimir Fibe on 18.02.2022.
-//
-
 import SwiftUI
 
 struct MainMessagesView: View {

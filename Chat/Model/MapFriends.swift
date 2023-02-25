@@ -1,10 +1,3 @@
-//
-//  MapFriends.swift
-//  Chat
-//
-//  Created by MacService on 06.05.2022.
-//
-
 import Firebase
 import FirebaseFirestoreSwift
 import MapKit

@@ -100,15 +100,6 @@
       }
     },
     {
-      "identity" : "rive-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/rive-app/rive-ios.git",
-      "state" : {
-        "revision" : "97d028b0cfbb2ab2e506dfabb63e2bc16f8bcfa1",
-        "version" : "2.0.29"
-      }
-    },
-    {
       "identity" : "swift-protobuf",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-protobuf.git",

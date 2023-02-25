@@ -1,10 +1,3 @@
-//
-//  Channel.swift
-//  Chat
-//
-//  Created by MacService on 20.05.2022.
-//
-
 import FirebaseFirestoreSwift
 
 struct Channel: Identifiable, Decodable {

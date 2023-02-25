@@ -1,10 +1,3 @@
-//
-//  SelectablePerson.swift
-//  Chat
-//
-//  Created by MacService on 01.05.2022.
-//
-
 import SwiftUI
 
 struct SelectablePerson: Identifiable {

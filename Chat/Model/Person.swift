@@ -1,10 +1,3 @@
-//
-//  Person.swift
-//  Chat
-//
-//  Created by MacService on 19.04.2022.
-//
-
 import Foundation
 import FirebaseFirestoreSwift
 import MapKit
