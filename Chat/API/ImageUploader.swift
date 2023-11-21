@@ -1,4 +1,5 @@
 import Firebase
+import FirebaseStorage
 import UIKit
 
 struct ImageUploader {

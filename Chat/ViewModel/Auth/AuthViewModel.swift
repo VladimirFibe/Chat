@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 import UIKit
 import Combine
+import FirebaseStorage
 
 class AuthViewModel: ObservableObject {
   

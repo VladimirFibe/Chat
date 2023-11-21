@@ -1,5 +1,6 @@
 import Foundation
 import Firebase
+import FirebaseStorage
 
 class FirebaseManager {
   let auth: Auth
