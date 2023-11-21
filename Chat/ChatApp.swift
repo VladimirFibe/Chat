@@ -1,10 +1,3 @@
-//
-//  ChatApp.swift
-//  Chat
-//
-//  Created by Vladimir Fibe on 17.02.2022.
-//
-
 import SwiftUI
 import Firebase
 
@@ -15,7 +8,7 @@ struct ChatApp: App {
   }
   var body: some Scene {
     WindowGroup {
-      MainMessagesView()
+      Text("Hi!")
     }
   }
 }
